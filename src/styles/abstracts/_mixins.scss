@@ -18,6 +18,47 @@
   }
 }
 
+@mixin respond-between($min, $max) {
+  @media (min-width: map.get($breakpoints, $min)) and
+         (max-width: calc(map.get($breakpoints, $max) - 0.02px)) {
+    @content;
+  }
+}
+
+/* ==========================================
+   QUICK BREAKPOINTS
+========================================== */
+
+@mixin mobile {
+  @include respond-down(md) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include respond-between(md, lg) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @include respond-down(lg) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @include respond-up(lg) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @include respond-up(xl) {
+    @content;
+  }
+}
+
 /* ==========================================
    CONTAINER
 ========================================== */
@@ -34,7 +75,7 @@
 @mixin section {
   padding-block: $section-padding-y-mobile;
 
-  @include respond-up(lg) {
+  @include desktop {
     padding-block: $section-padding-y;
   }
 }
@@ -88,7 +129,8 @@
 
 @mixin absolute-center {
   position: absolute;
-  inset: 50% auto auto 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -97,6 +139,7 @@
 ========================================== */
 
 @mixin image-cover {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -110,4 +153,23 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+@mixin card {
+  background: $white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+}
+
+/* ==========================================
+   TRANSITION
+========================================== */
+
+@mixin transition($property: all) {
+  transition: $property $transition-base;
 }

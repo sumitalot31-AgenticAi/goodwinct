@@ -1,0 +1,94 @@
+@use '../../../styles/abstracts' as *;
+
+.top-header {
+  background: $primary-700;
+  color: $white;
+  font-size: $text-sm;
+}
+
+.container {
+  @include container;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 48px;
+  gap: 1rem;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.header-link,
+.office-hours {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+}
+
+.header-link {
+  color: $white;
+  text-decoration: none;
+
+  transition: color .3s ease;
+
+  &:hover {
+    color: $primary-200;
+  }
+}
+
+.header-right a {
+  color: $white;
+  text-decoration: none;
+
+  transition: color .3s ease;
+
+  &:hover {
+    color: $primary-200;
+  }
+}
+
+.material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* ===============================
+   Tablet
+================================ */
+
+@include tablet {
+
+  .office-hours {
+    display: none;
+  }
+
+}
+
+/* ===============================
+   Mobile
+================================ */
+
+@include mobile {
+
+  .container {
+    min-height: 42px;
+  }
+
+  .header-left {
+    gap: 1rem;
+  }
+
+  .header-right {
+    gap: .75rem;
+  }
+
+  .header-left a:last-child {
+    display: none;
+  }
+
+}

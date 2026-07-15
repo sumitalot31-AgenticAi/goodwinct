@@ -1,0 +1,64 @@
+{
+  "company": {
+    "name": "Goodwin City",
+    "tagline": "Building Dreams, Creating Communities",
+    "phone": "+91 9876543210",
+    "email": "info@goodwincity.com",
+    "officeHours": "Mon - Sat | 9:00 AM - 6:00 PM",
+    "address": "Pune, Maharashtra, India"
+  },
+
+  "branding": {
+    "logo": "assets/images/logo/logo.svg",
+    "favicon": "assets/images/logo/favicon.ico"
+  },
+
+  "navigation": [
+    {
+      "label": "Home",
+      "route": "/"
+    },
+    {
+      "label": "About",
+      "route": "/about"
+    },
+    {
+      "label": "Projects",
+      "route": "/projects"
+    },
+    {
+      "label": "Gallery",
+      "route": "/gallery"
+    },
+    {
+      "label": "Blog",
+      "route": "/blog"
+    },
+    {
+      "label": "Testimonials",
+      "route": "/testimonials"
+    },
+    {
+      "label": "Contact",
+      "route": "/contact"
+    }
+  ],
+
+  "social": {
+    "facebook": "#",
+    "instagram": "#",
+    "linkedin": "#",
+    "youtube": "#"
+  },
+
+  "seo": {
+    "title": "Goodwin City",
+    "description": "Premium Real Estate Projects",
+    "keywords": [
+      "Real Estate",
+      "Plots",
+      "Flats",
+      "Bungalows"
+    ]
+  }
+}

@@ -1,1 +1,71 @@
-<p>header works!</p>
+<header class="top-header" *ngIf="site">
+  <div class="container">
+
+    <div class="header-left">
+
+      <a
+        [href]="'tel:' + site.company.phone"
+        class="header-link">
+
+        <span class="material-symbols-outlined">call</span>
+
+        {{ site.company.phone }}
+
+      </a>
+
+      <a
+        [href]="'mailto:' + site.company.email"
+        class="header-link">
+
+        <span class="material-symbols-outlined">mail</span>
+
+        {{ site.company.email }}
+
+      </a>
+
+      <div class="office-hours">
+
+        <span class="material-symbols-outlined">
+          schedule
+        </span>
+
+        {{ site.company.officeHours }}
+
+      </div>
+
+    </div>
+
+    <div class="header-right">
+
+      <a
+        [href]="site.social.facebook"
+        target="_blank"
+        aria-label="Facebook">
+        Facebook
+      </a>
+
+      <a
+        [href]="site.social.instagram"
+        target="_blank"
+        aria-label="Instagram">
+        Instagram
+      </a>
+
+      <a
+        [href]="site.social.linkedin"
+        target="_blank"
+        aria-label="LinkedIn">
+        LinkedIn
+      </a>
+
+      <a
+        [href]="site.social.youtube"
+        target="_blank"
+        aria-label="YouTube">
+        YouTube
+      </a>
+
+    </div>
+
+  </div>
+</header>
