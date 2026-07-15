@@ -1,1 +1,168 @@
-<p>navbar works!</p>
+<nav
+  class="navbar"
+  [class.scrolled]="scrolled()">
+
+  <div class="container">
+
+    <!-- Logo -->
+    <a
+      routerLink="/"
+      class="logo"
+      (click)="closeMobileMenu()">
+
+      <img
+        [src]="site().branding.logo"
+        [alt]="site().company.name">
+
+    </a>
+
+    <!-- Desktop Navigation -->
+    <ul class="nav-menu">
+
+      @for (item of site().navigation; track item.route) {
+
+        <li
+          class="nav-item"
+          [class.has-dropdown]="!!item.children?.length">
+
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: item.route === '/' }">
+
+            {{ item.label }}
+
+            @if (item.children?.length) {
+              <span class="material-symbols-outlined arrow">
+                expand_more
+              </span>
+            }
+
+          </a>
+
+          @if (item.children?.length) {
+
+            <ul class="dropdown">
+
+              @for (child of item.children; track child.route) {
+
+                <li>
+
+                  <a
+                    [routerLink]="child.route"
+                    routerLinkActive="active">
+
+                    {{ child.label }}
+
+                  </a>
+
+                </li>
+
+              }
+
+            </ul>
+
+          }
+
+        </li>
+
+      }
+
+    </ul>
+
+    <!-- CTA -->
+    <a
+      class="cta-btn"
+      routerLink="/contact">
+
+      Enquire Now
+
+    </a>
+
+    <!-- Hamburger -->
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation"
+      (click)="toggleMobileMenu()">
+
+      <span class="material-symbols-outlined">
+
+        @if (mobileMenuOpen()) {
+          close
+        } @else {
+          menu
+        }
+
+      </span>
+
+    </button>
+
+  </div>
+
+  <!-- Mobile Navigation -->
+
+  <div
+    class="mobile-nav"
+    [class.open]="mobileMenuOpen()">
+
+    <ul>
+
+      @for (item of site().navigation; track item.route) {
+
+        <li>
+
+          <a
+            [routerLink]="item.route"
+            (click)="closeMobileMenu()">
+
+            {{ item.label }}
+
+          </a>
+
+          @if (item.children?.length) {
+
+            <ul class="mobile-submenu">
+
+              @for (child of item.children; track child.route) {
+
+                <li>
+
+                  <a
+                    [routerLink]="child.route"
+                    (click)="closeMobileMenu()">
+
+                    {{ child.label }}
+
+                  </a>
+
+                </li>
+
+              }
+
+            </ul>
+
+          }
+
+        </li>
+
+      }
+
+      <li>
+
+        <a
+          class="mobile-cta"
+          routerLink="/contact"
+          (click)="closeMobileMenu()">
+
+          Enquire Now
+
+        </a>
+
+      </li>
+
+    </ul>
+
+  </div>
+
+</nav>

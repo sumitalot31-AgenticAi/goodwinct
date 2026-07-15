@@ -1,0 +1,270 @@
+@use '../../../styles/abstracts' as *;
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: $z-sticky;
+  background: $white;
+  box-shadow: $shadow-sm;
+  transition: all $transition-base;
+
+  &.scrolled {
+    box-shadow: $shadow-md;
+  }
+}
+
+.container {
+  @include container;
+  @include flex-between;
+  min-height: 82px;
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 60px;
+    display: block;
+  }
+}
+
+/* ===========================
+   Desktop Navigation
+=========================== */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+
+  > a {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+
+    padding: 1.8rem 0;
+
+    color: $text-primary;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color $transition-base;
+  }
+
+  > a:hover,
+  > a.active {
+    color: $primary-700;
+  }
+}
+
+.arrow {
+  font-size: 18px;
+  transition: transform .3s;
+}
+
+.nav-item:hover .arrow {
+  transform: rotate(180deg);
+}
+
+/* ===========================
+   Dropdown
+=========================== */
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+
+  width: 240px;
+
+  margin: 0;
+  padding: .75rem 0;
+
+  list-style: none;
+
+  background: $white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+
+  transition: all .25s ease;
+}
+
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown a {
+  display: block;
+
+  padding: .8rem 1.25rem;
+
+  color: $text-primary;
+  text-decoration: none;
+
+  transition: all .25s;
+}
+
+.dropdown a:hover {
+  background: $primary-50;
+  color: $primary-700;
+}
+
+/* ===========================
+   CTA
+=========================== */
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: .85rem 1.6rem;
+
+  background: $primary-700;
+  color: $white;
+
+  border-radius: $radius-full;
+
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: .3s;
+}
+
+.cta-btn:hover {
+  background: $primary-600;
+  transform: translateY(-2px);
+}
+
+/* ===========================
+   Hamburger
+=========================== */
+
+.menu-toggle {
+  display: none;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  .material-symbols-outlined {
+    font-size: 2rem;
+    color: $text-primary;
+  }
+}
+
+/* ===========================
+   Mobile Menu
+=========================== */
+
+.mobile-nav {
+  display: none;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@include tablet-down {
+
+  .container {
+    min-height: 72px;
+  }
+
+  .logo img {
+    height: 52px;
+  }
+
+  .nav-menu,
+  .cta-btn {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav {
+    display: block;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    background: $white;
+
+    box-shadow: $shadow-md;
+
+    max-height: 0;
+    overflow: hidden;
+
+    transition: max-height .35s ease;
+  }
+
+  .mobile-nav.open {
+    max-height: 700px;
+  }
+
+  .mobile-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .mobile-nav li {
+    border-bottom: 1px solid $border-light;
+  }
+
+  .mobile-nav a {
+    display: block;
+
+    padding: .9rem 0;
+
+    color: $text-primary;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .mobile-submenu {
+    padding-left: 1rem !important;
+  }
+
+  .mobile-submenu li {
+    border: none;
+  }
+
+  .mobile-submenu a {
+    color: $text-secondary;
+    font-size: .95rem;
+  }
+
+  .mobile-cta {
+    display: inline-block;
+    margin-top: 1rem;
+
+    padding: .9rem 1.25rem;
+
+    background: $primary-700;
+    color: $white !important;
+
+    border-radius: $radius-md;
+  }
+}

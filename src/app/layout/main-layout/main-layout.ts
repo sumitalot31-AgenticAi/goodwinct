@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+
+import { Site } from '../../core/interfaces/site.interface';
+import { SiteService } from '../../core/services/site.service';
 
 import { Header } from '../header/header';
 import { Navbar } from '../navbar/navbar';
@@ -10,6 +14,7 @@ import { ScrollTop } from '../../shared/components/scroll-top/scroll-top';
   selector: 'app-main-layout',
   standalone: true,
   imports: [
+    CommonModule,
     RouterOutlet,
     Header,
     Navbar,
@@ -19,4 +24,8 @@ import { ScrollTop } from '../../shared/components/scroll-top/scroll-top';
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',
 })
-export class MainLayout {}
+export class MainLayout {
+  private readonly siteService = inject(SiteService);
+
+  readonly site: Site = this.siteService.getSite();
+}

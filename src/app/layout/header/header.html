@@ -1,25 +1,26 @@
-<header class="top-header" *ngIf="site">
+@if (site(); as siteData) {
+<header class="top-header">
   <div class="container">
 
     <div class="header-left">
 
       <a
-        [href]="'tel:' + site.company.phone"
+        [href]="'tel:' + siteData.company.phone"
         class="header-link">
 
         <span class="material-symbols-outlined">call</span>
 
-        {{ site.company.phone }}
+        {{ siteData.company.phone }}
 
       </a>
 
       <a
-        [href]="'mailto:' + site.company.email"
+        [href]="'mailto:' + siteData.company.email"
         class="header-link">
 
         <span class="material-symbols-outlined">mail</span>
 
-        {{ site.company.email }}
+        {{ siteData.company.email }}
 
       </a>
 
@@ -29,7 +30,7 @@
           schedule
         </span>
 
-        {{ site.company.officeHours }}
+        {{ siteData.company.officeHours }}
 
       </div>
 
@@ -38,28 +39,28 @@
     <div class="header-right">
 
       <a
-        [href]="site.social.facebook"
+        [href]="siteData.social.facebook"
         target="_blank"
         aria-label="Facebook">
         Facebook
       </a>
 
       <a
-        [href]="site.social.instagram"
+        [href]="siteData.social.instagram"
         target="_blank"
         aria-label="Instagram">
         Instagram
       </a>
 
       <a
-        [href]="site.social.linkedin"
+        [href]="siteData.social.linkedin"
         target="_blank"
         aria-label="LinkedIn">
         LinkedIn
       </a>
 
       <a
-        [href]="site.social.youtube"
+        [href]="siteData.social.youtube"
         target="_blank"
         aria-label="YouTube">
         YouTube
@@ -69,3 +70,4 @@
 
   </div>
 </header>
+}

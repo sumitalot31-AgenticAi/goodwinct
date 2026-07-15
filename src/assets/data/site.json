@@ -10,6 +10,7 @@
 
   "branding": {
     "logo": "assets/images/logo/logo.svg",
+    "logoLight": "assets/images/logo/logo-light.svg",
     "favicon": "assets/images/logo/favicon.ico"
   },
 
@@ -24,7 +25,21 @@
     },
     {
       "label": "Projects",
-      "route": "/projects"
+      "route": "/projects",
+      "children": [
+        {
+          "label": "Running Projects",
+          "route": "/projects/running"
+        },
+        {
+          "label": "Upcoming Projects",
+          "route": "/projects/upcoming"
+        },
+        {
+          "label": "Completed Projects",
+          "route": "/projects/completed"
+        }
+      ]
     },
     {
       "label": "Gallery",
@@ -45,20 +60,49 @@
   ],
 
   "social": {
-    "facebook": "#",
-    "instagram": "#",
-    "linkedin": "#",
-    "youtube": "#"
+    "facebook": "https://facebook.com/goodwincity",
+    "instagram": "https://instagram.com/goodwincity",
+    "linkedin": "https://linkedin.com/company/goodwincity",
+    "youtube": "https://youtube.com/@goodwincity"
+  },
+
+  "contact": {
+    "whatsapp": "+919876543210",
+    "googleMaps": "https://maps.google.com/",
+    "location": {
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    }
+  },
+
+  "cta": {
+    "primaryButton": {
+      "text": "Enquire Now",
+      "route": "/contact"
+    },
+    "secondaryButton": {
+      "text": "Book Site Visit",
+      "route": "/contact"
+    }
   },
 
   "seo": {
     "title": "Goodwin City",
-    "description": "Premium Real Estate Projects",
+    "description": "Premium residential and commercial real estate projects offering plots, flats, bungalows and row houses.",
     "keywords": [
       "Real Estate",
       "Plots",
       "Flats",
-      "Bungalows"
+      "Bungalows",
+      "Row Houses",
+      "Goodwin City",
+      "Property",
+      "Residential Projects"
     ]
+  },
+
+  "footer": {
+    "copyright": "© 2026 Goodwin City. All Rights Reserved.",
+    "developer": "Developed by Goodwin City"
   }
 }
