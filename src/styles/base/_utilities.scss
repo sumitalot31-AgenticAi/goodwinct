@@ -1,0 +1,131 @@
+@use '../abstracts' as *;
+
+/* ==========================================
+   DISPLAY
+========================================== */
+
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+/* ==========================================
+   FLEX
+========================================== */
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+/* ==========================================
+   TEXT
+========================================== */
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-primary {
+  color: $primary-500 !important;
+}
+
+.text-secondary {
+  color: $text-secondary !important;
+}
+
+.text-white {
+  color: $white !important;
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+.bg-primary {
+  background-color: $primary-500 !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-light {
+  background-color: $background !important;
+}
+
+/* ==========================================
+   WIDTH
+========================================== */
+
+.w-100 {
+  width: 100%;
+}
+
+/* ==========================================
+   SPACING
+========================================== */
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.mx-auto {
+  margin-inline: auto;
+}
+
+.my-auto {
+  margin-block: auto;
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ==========================================
+   VISIBILITY
+========================================== */
+
+.hidden {
+  display: none !important;
+}
+
+.visible {
+  display: block !important;
+}

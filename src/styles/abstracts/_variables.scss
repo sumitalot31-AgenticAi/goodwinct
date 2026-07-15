@@ -1,0 +1,62 @@
+@use './colors' as *;
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+$container-max-width: 1320px;
+$container-padding: 1rem;
+$header-height: 5rem;
+
+/* ==========================================
+   BORDER RADIUS
+========================================== */
+
+$radius-xs: 0.25rem;
+$radius-sm: 0.5rem;
+$radius-md: 0.75rem;
+$radius-lg: 1rem;
+$radius-xl: 1.5rem;
+$radius-2xl: 2rem;
+$radius-full: 9999px;
+
+/* ==========================================
+   SHADOWS
+========================================== */
+
+$shadow-sm: 0 2px 8px $shadow-color-sm;
+$shadow-md: 0 8px 24px $shadow-color;
+$shadow-lg: 0 16px 40px $shadow-color-lg;
+
+/* ==========================================
+   TRANSITIONS
+========================================== */
+
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+/* ==========================================
+   Z-INDEX
+========================================== */
+
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-tooltip: 1060;
+
+/* ==========================================
+   COMMON SIZES
+========================================== */
+
+$button-height: 3rem;
+$input-height: 3.25rem;
+
+/* ==========================================
+   SECTION SPACING
+========================================== */
+
+$section-padding-y: 6rem;
+$section-padding-y-mobile: 4rem;
