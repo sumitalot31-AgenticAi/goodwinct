@@ -1,0 +1,137 @@
+.projects-showcase {
+  padding: 5rem 0;
+  background: #f8faf8;
+
+  .container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+
+/* ===========================
+   Section Header
+=========================== */
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  .section-tag {
+    display: inline-block;
+    padding: 0.45rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 50px;
+    background: rgba(46, 125, 50, 0.1);
+    color: #2e7d32;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: #1f2937;
+  }
+
+  p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #6b7280;
+    line-height: 1.7;
+  }
+}
+
+/* ===========================
+   Tabs
+=========================== */
+
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.tab-button {
+  cursor: pointer;
+  padding: 0.8rem 1.6rem;
+  border: 2px solid #2e7d32;
+  border-radius: 999px;
+  background: #fff;
+  color: #2e7d32;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #2e7d32;
+    color: #fff;
+    transform: translateY(-2px);
+  }
+
+  &.active {
+    background: #2e7d32;
+    color: #fff;
+    box-shadow: 0 10px 24px rgba(46, 125, 50, 0.25);
+  }
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* ===========================
+   View All
+=========================== */
+
+.view-all {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.view-all-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  border-radius: 999px;
+  background: #2e7d32;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #1b5e20;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(46, 125, 50, 0.3);
+  }
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+
+  .projects-showcase {
+    padding: 4rem 0;
+  }
+
+  .project-tabs {
+    gap: 0.75rem;
+  }
+
+  .tab-button {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.9rem;
+  }
+}

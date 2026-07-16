@@ -1,1 +1,33 @@
-<p>running-projects works!</p>
+<section class="running-projects">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span>Ongoing Developments</span>
+
+      <h2>
+        Running Projects
+      </h2>
+
+      <p>
+        Discover our currently active residential developments.
+      </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+      @for (project of projects; track project.id) {
+
+        <app-project-card
+          [project]="project">
+        </app-project-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

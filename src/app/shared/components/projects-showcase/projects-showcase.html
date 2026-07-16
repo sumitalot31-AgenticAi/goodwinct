@@ -1,0 +1,65 @@
+<section class="projects-showcase">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-tag">
+        Our Projects
+      </span>
+
+      <h2>
+        Explore Our Projects
+      </h2>
+
+      <p>
+        Discover our running, upcoming and completed developments.
+      </p>
+
+    </div>
+
+    <div class="project-tabs">
+
+      @for (tab of tabs; track tab) {
+
+        <button
+          type="button"
+          class="tab-button"
+          [class.active]="activeTab() === tab"
+          (click)="setTab(tab)">
+
+          {{ tab }}
+
+        </button>
+
+      }
+
+    </div>
+
+    <div class="projects-grid">
+
+      @for (project of projects; track project.id) {
+
+        <app-project-card
+          [project]="project">
+        </app-project-card>
+
+      }
+
+    </div>
+
+    <div class="view-all">
+
+      <a
+        routerLink="/projects"
+        class="view-all-btn">
+
+        View All Projects
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

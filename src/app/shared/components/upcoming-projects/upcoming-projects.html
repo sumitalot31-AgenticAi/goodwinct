@@ -1,1 +1,31 @@
-<p>upcoming-projects works!</p>
+<section class="upcoming-projects">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span>Coming Soon</span>
+
+      <h2>Upcoming Projects</h2>
+
+      <p>
+        Explore our upcoming developments launching soon.
+      </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+      @for (project of projects; track project.id) {
+
+        <app-project-card
+          [project]="project">
+        </app-project-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

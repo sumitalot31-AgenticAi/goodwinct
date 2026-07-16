@@ -45,4 +45,10 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+  path: 'projects/:slug',
+  loadComponent: () =>
+    import('./pages/project-details/project-details')
+      .then(m => m.ProjectDetails)
+}
 ];

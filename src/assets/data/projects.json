@@ -1,0 +1,159 @@
+[
+  {
+    "id": 1,
+    "slug": "mountain-view",
+    "name": "Mountain View",
+    "description": "Premium residential plotting project located in Karnjgaon with modern amenities and excellent connectivity.",
+    "shortDescription": "Premium NA plotting project.",
+    "category": "Plots",
+    "status": "Running",
+
+    "location": "Karnjgaon",
+    "address": "Karnjgaon, Satara, Maharashtra",
+
+    "year": 2026,
+
+    "price": "Starting ₹5.99 Lakhs",
+    "pricePerSqFt": 599,
+
+    "totalArea": "25 Acres",
+
+    "plotSizes": [
+      "1200 Sq.ft.",
+      "1500 Sq.ft.",
+      "1800 Sq.ft.",
+      "2400 Sq.ft."
+    ],
+
+    "image": "assets/images/projects/mountain-view/cover.webp",
+
+    "gallery": [
+      "assets/images/projects/mountain-view/1.webp",
+      "assets/images/projects/mountain-view/2.webp",
+      "assets/images/projects/mountain-view/3.webp"
+    ],
+
+    "amenities": [
+      "Internal Roads",
+      "Street Lights",
+      "Water Supply",
+      "Garden",
+      "Children Play Area",
+      "24x7 Security"
+    ],
+
+    "features": [
+      "NA Plots",
+      "Clear Title",
+      "Bank Loan Available",
+      "Immediate Registration"
+    ],
+
+    "brochure": "assets/brochures/mountain-view.pdf",
+
+    "googleMap": "https://maps.google.com",
+
+    "possession": "December 2026",
+
+    "rera": "P52100012345",
+
+    "isFeatured": true
+  },
+  {
+    "id": 2,
+    "slug": "anant-world",
+    "name": "Anant World",
+    "description": "Upcoming premium plotting project in Satara.",
+    "shortDescription": "Upcoming luxury plotting project.",
+    "category": "Plots",
+    "status": "Upcoming",
+
+    "location": "Satara",
+    "address": "Satara, Maharashtra",
+
+    "year": 2027,
+
+    "price": "Launching Soon",
+    "pricePerSqFt": 699,
+
+    "totalArea": "30 Acres",
+
+    "plotSizes": [
+      "1200 Sq.ft.",
+      "1500 Sq.ft."
+    ],
+
+    "image": "assets/images/projects/anant-world/cover.webp",
+
+    "gallery": [],
+
+    "amenities": [
+      "Club House",
+      "Garden",
+      "Street Lights"
+    ],
+
+    "features": [
+      "Premium Location",
+      "Wide Roads"
+    ],
+
+    "brochure": "",
+
+    "googleMap": "",
+
+    "possession": "Coming Soon",
+
+    "rera": "",
+
+    "isFeatured": true
+  },
+  {
+    "id": 3,
+    "slug": "goodwin-basera",
+    "name": "Goodwin Basera",
+    "description": "Completed residential plotting project.",
+    "shortDescription": "Completed premium project.",
+    "category": "Plots",
+    "status": "Completed",
+
+    "location": "Kanhephata",
+    "address": "Kanhephata, Maharashtra",
+
+    "year": 2021,
+
+    "price": "Sold Out",
+    "pricePerSqFt": 450,
+
+    "totalArea": "18 Acres",
+
+    "plotSizes": [
+      "1000 Sq.ft.",
+      "1200 Sq.ft."
+    ],
+
+    "image": "assets/images/projects/goodwin-basera/cover.webp",
+
+    "gallery": [],
+
+    "amenities": [
+      "Internal Roads",
+      "Water Supply"
+    ],
+
+    "features": [
+      "Sold Out",
+      "Clear Title"
+    ],
+
+    "brochure": "",
+
+    "googleMap": "",
+
+    "possession": "Completed",
+
+    "rera": "",
+
+    "isFeatured": true
+  }
+]

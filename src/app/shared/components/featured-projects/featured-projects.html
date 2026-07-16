@@ -1,1 +1,45 @@
-<p>featured-projects works!</p>
+<section class="featured-projects">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span>Our Projects</span>
+
+      <h2>
+        Featured Projects
+      </h2>
+
+      <p>
+        Explore our handpicked residential projects crafted for modern living.
+      </p>
+
+    </div>
+
+    <div class="projects-grid">
+
+      @for (project of projects; track project.id) {
+
+        <app-project-card
+          [project]="project">
+        </app-project-card>
+
+      }
+
+    </div>
+
+    <div class="view-all">
+
+      <a
+        routerLink="/projects"
+        class="btn-primary">
+
+        View All Projects
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
