@@ -1,0 +1,101 @@
+<section
+  class="hero"
+  (mouseenter)="stopAutoSlide()"
+  (mouseleave)="startAutoSlide()">
+
+  @for (slide of slides; track slide.id; let i = $index) {
+
+    <div
+      class="slide"
+      [class.active]="i === currentSlide"
+      [style.background-image]="'url(' + slide.image + ')'">
+
+      <div class="overlay">
+
+        <div class="container">
+
+          <div class="content">
+
+            <span class="subtitle">
+
+              {{ slide.subtitle }}
+
+            </span>
+
+            <h1>
+
+              {{ slide.title }}
+
+            </h1>
+
+            <p>
+
+              {{ slide.description }}
+
+            </p>
+
+            <div class="buttons">
+
+              <a
+                class="btn btn-primary"
+                [routerLink]="slide.primaryRoute">
+
+                {{ slide.primaryButton }}
+
+              </a>
+
+              <a
+                class="btn btn-secondary"
+                [routerLink]="slide.secondaryRoute">
+
+                {{ slide.secondaryButton }}
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  }
+
+  <!-- Navigation -->
+
+  <button
+    class="arrow left"
+    (click)="previous()">
+
+    ❮
+
+  </button>
+
+  <button
+    class="arrow right"
+    (click)="next()">
+
+    ❯
+
+  </button>
+
+  <!-- Indicators -->
+
+  <div class="indicators">
+
+    @for (slide of slides; track slide.id; let i = $index) {
+
+      <button
+        class="dot"
+        [class.active]="i === currentSlide"
+        (click)="goTo(i)">
+      </button>
+
+    }
+
+  </div>
+
+</section>

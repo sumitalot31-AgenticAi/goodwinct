@@ -1,0 +1,123 @@
+<section class="property-search">
+
+  <div class="container">
+
+    <div class="search-card">
+
+      <div class="heading">
+
+        <span>Find Your Dream Property</span>
+
+        <h2>
+          Search Properties
+        </h2>
+
+      </div>
+
+      <div class="search-grid">
+
+        <!-- Property Type -->
+
+        <div class="form-group">
+
+          <label>
+            Property Type
+          </label>
+
+          <select [(ngModel)]="propertyType">
+
+            @for (type of options.propertyTypes; track type) {
+
+              <option [value]="type">
+                {{ type }}
+              </option>
+
+            }
+
+          </select>
+
+        </div>
+
+        <!-- Status -->
+
+        <div class="form-group">
+
+          <label>
+            Project Status
+          </label>
+
+          <select [(ngModel)]="status">
+
+            @for (item of options.projectStatus; track item) {
+
+              <option [value]="item">
+                {{ item }}
+              </option>
+
+            }
+
+          </select>
+
+        </div>
+
+        <!-- Location -->
+
+        <div class="form-group">
+
+          <label>
+            Location
+          </label>
+
+          <select [(ngModel)]="location">
+
+            @for (item of options.locations; track item) {
+
+              <option [value]="item">
+                {{ item }}
+              </option>
+
+            }
+
+          </select>
+
+        </div>
+
+        <!-- Budget -->
+
+        <div class="form-group">
+
+          <label>
+            Budget
+          </label>
+
+          <select [(ngModel)]="budget">
+
+            @for (item of options.budgetRanges; track item) {
+
+              <option [value]="item">
+                {{ item }}
+              </option>
+
+            }
+
+          </select>
+
+        </div>
+
+        <!-- Search Button -->
+
+        <button
+          class="search-btn"
+          (click)="search()">
+
+          Search Property
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

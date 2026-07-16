@@ -1,0 +1,121 @@
+@use '../../../../styles/abstracts' as *;
+
+.property-search {
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+  padding: 0 1rem 5rem;
+}
+
+.container {
+  @include container;
+}
+
+.search-card {
+  background: rgba($white, .96);
+  backdrop-filter: blur(20px);
+  border-radius: $radius-xl;
+  padding: 2.5rem;
+  box-shadow: $shadow-lg;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  span {
+    display: inline-block;
+    color: $primary-700;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+  }
+
+  h2 {
+    margin: 0;
+    color: $text-primary;
+    font-size: clamp(2rem, 4vw, 3rem);
+  }
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  align-items: end;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: .5rem;
+    font-weight: 600;
+    color: $text-secondary;
+  }
+
+  select {
+    height: 54px;
+    padding: 0 1rem;
+    border: 1px solid $border;
+    border-radius: $radius-md;
+    background: $white;
+    font-size: 1rem;
+    transition: .3s;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-600;
+      box-shadow: 0 0 0 3px rgba($primary-500, .15);
+    }
+  }
+}
+
+.search-btn {
+  height: 54px;
+  border: none;
+  border-radius: $radius-md;
+  background: $primary-700;
+  color: $white;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover {
+    background: $primary-600;
+    transform: translateY(-2px);
+  }
+}
+
+@include tablet-down {
+  .search-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-btn {
+    grid-column: span 2;
+  }
+}
+
+@include mobile {
+  .property-search {
+    margin-top: 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .search-card {
+    padding: 1.5rem;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-btn {
+    grid-column: auto;
+    width: 100%;
+  }
+}

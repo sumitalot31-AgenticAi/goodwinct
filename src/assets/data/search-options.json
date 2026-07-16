@@ -1,0 +1,38 @@
+{
+  "propertyTypes": [
+    "All Properties",
+    "Plot",
+    "1 BHK Flat",
+    "2 BHK Flat",
+    "3 BHK Flat",
+    "Row House",
+    "Bungalow"
+  ],
+
+  "projectStatus": [
+    "All Status",
+    "Running",
+    "Upcoming",
+    "Completed"
+  ],
+
+  "locations": [
+    "All Locations",
+    "Nagpur",
+    "Wardha Road",
+    "Manish Nagar",
+    "Besa",
+    "MIHAN",
+    "Hingna",
+    "Kamptee"
+  ],
+
+  "budgetRanges": [
+    "Any Budget",
+    "₹10 - ₹25 Lakhs",
+    "₹25 - ₹50 Lakhs",
+    "₹50 - ₹75 Lakhs",
+    "₹75 Lakhs - ₹1 Cr",
+    "Above ₹1 Cr"
+  ]
+}

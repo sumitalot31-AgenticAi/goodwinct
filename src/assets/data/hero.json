@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Find Your Dream Property",
+    "subtitle": "Premium Residential Projects",
+    "description": "Discover premium plots, flats, row houses and bungalows at the best locations.",
+    "image": "assets/images/hero/hero-1.jpg",
+    "primaryButton": "Explore Projects",
+    "primaryRoute": "/projects",
+    "secondaryButton": "Contact Us",
+    "secondaryRoute": "/contact"
+  },
+  {
+    "id": 2,
+    "title": "Invest Today. Grow Tomorrow.",
+    "subtitle": "Trusted Real Estate Partner",
+    "description": "Premium residential developments with world-class amenities and excellent connectivity.",
+    "image": "assets/images/hero/hero-2.jpg",
+    "primaryButton": "View Projects",
+    "primaryRoute": "/projects",
+    "secondaryButton": "Book Site Visit",
+    "secondaryRoute": "/contact"
+  },
+  {
+    "id": 3,
+    "title": "Your Home Starts Here",
+    "subtitle": "Luxury Living Redefined",
+    "description": "Choose from our running, upcoming and completed projects designed for modern families.",
+    "image": "assets/images/hero/hero-3.jpg",
+    "primaryButton": "Get Started",
+    "primaryRoute": "/projects",
+    "secondaryButton": "Enquire Now",
+    "secondaryRoute": "/contact"
+  }
+]
