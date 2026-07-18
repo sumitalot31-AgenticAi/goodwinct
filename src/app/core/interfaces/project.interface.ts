@@ -6,6 +6,8 @@ export interface Project {
 
   name: string;
 
+  shortDescription?: string;
+
   description: string;
 
   category: string;
@@ -14,29 +16,27 @@ export interface Project {
 
   location: string;
 
+  address?: string;
+
   year?: number;
 
   price: string;
 
-  image: string;
+  pricePerSqFt?: number;
 
-  isFeatured: boolean;
+  thumbnail: string;
 
-  shortDescription?: string;
+  coverImage: string;
 
-  address?: string;
-
-  gallery?: string[];
+  gallery: string[];
 
   totalArea?: string;
 
-  plotSizes?: string[];
+  plotSizes: string[];
 
-  pricePerSqFt?: number;
+  amenities: string[];
 
-  amenities?: string[];
-
-  features?: string[];
+  features: string[];
 
   brochure?: string;
 
@@ -45,5 +45,7 @@ export interface Project {
   possession?: string;
 
   rera?: string;
+
+  isFeatured: boolean;
 
 }

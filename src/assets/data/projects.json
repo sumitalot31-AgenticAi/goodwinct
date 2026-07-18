@@ -1,159 +1,284 @@
 [
   {
     "id": 1,
+    "slug": "42-square-hills",
+    "name": "42 Square Hills",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "42 Square Hills is a completed residential plotting project developed by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Chandkhed",
+    "address": "Chandkhed, Maharashtra",
+    "year": 2016,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/42-square-hills/thumb.webp",
+    "coverImage": "assets/images/projects/42-square-hills/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/42-square-hills.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+  {
+    "id": 2,
+    "slug": "dam-view-phase-1",
+    "name": "Dam View Phase 1",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "Dam View Phase 1 is a completed plotting project by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Kusgaon",
+    "address": "Kusgaon, Maharashtra",
+    "year": 2018,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/dam-view-phase-1/thumb.webp",
+    "coverImage": "assets/images/projects/dam-view-phase-1/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/dam-view-phase-1.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+  {
+    "id": 3,
+    "slug": "dam-view-phase-3",
+    "name": "Dam View Phase 3",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "Dam View Phase 3 is a completed plotting project by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Kusgaon",
+    "address": "Kusgaon, Maharashtra",
+    "year": 2019,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/dam-view-phase-3/thumb.webp",
+    "coverImage": "assets/images/projects/dam-view-phase-3/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/dam-view-phase-3.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+  {
+    "id": 4,
+    "slug": "river-view",
+    "name": "River View",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "River View is a completed plotting project by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Pusane",
+    "address": "Pusane, Maharashtra",
+    "year": 2019,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/river-view/thumb.webp",
+    "coverImage": "assets/images/projects/river-view/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/river-view.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+  {
+    "id": 5,
+    "slug": "satsang-nagar",
+    "name": "Satsang Nagar",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "Satsang Nagar is a completed plotting project by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Kachrewadi",
+    "address": "Kachrewadi, Maharashtra",
+    "year": 2019,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/satsang-nagar/thumb.webp",
+    "coverImage": "assets/images/projects/satsang-nagar/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/satsang-nagar.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+    {
+    "id": 6,
+    "slug": "smart-city",
+    "name": "Smart City",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "Smart City is a completed plotting project by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Done",
+    "address": "Done, Maharashtra",
+    "year": 2019,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/smart-city/thumb.webp",
+    "coverImage": "assets/images/projects/smart-city/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/smart-city.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+  {
+    "id": 7,
+    "slug": "nature-valley",
+    "name": "Nature Valley",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "Nature Valley is a completed plotting project by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Mau",
+    "address": "Mau, Maharashtra",
+    "year": 2021,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/nature-valley/thumb.webp",
+    "coverImage": "assets/images/projects/nature-valley/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/nature-valley.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+  {
+    "id": 8,
+    "slug": "goodwin-basera",
+    "name": "Goodwin Basera",
+    "shortDescription": "Completed residential plotting project.",
+    "description": "Goodwin Basera is a completed plotting project by Goodwin City.",
+    "category": "Plots",
+    "status": "Completed",
+    "location": "Kanhephata",
+    "address": "Kanhephata, Maharashtra",
+    "year": 2021,
+    "price": "",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/goodwin-basera/thumb.webp",
+    "coverImage": "assets/images/projects/goodwin-basera/cover.webp",
+    "gallery": [],
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
+    "brochure": "assets/brochures/goodwin-basera.pdf",
+    "googleMap": "",
+    "possession": "Completed",
+    "rera": "",
+    "isFeatured": false
+  },
+  {
+    "id": 9,
     "slug": "mountain-view",
     "name": "Mountain View",
-    "description": "Premium residential plotting project located in Karnjgaon with modern amenities and excellent connectivity.",
-    "shortDescription": "Premium NA plotting project.",
+    "shortDescription": "Premium residential plotting project.",
+    "description": "Mountain View is an ongoing premium plotting project located at Karnjgaon near Kamshet.",
     "category": "Plots",
     "status": "Running",
-
-    "location": "Karnjgaon",
-    "address": "Karnjgaon, Satara, Maharashtra",
-
+    "location": "Karnjgaon, Kamshet",
+    "address": "Karnjgaon, Kamshet, Maharashtra",
     "year": 2026,
-
-    "price": "Starting ₹5.99 Lakhs",
-    "pricePerSqFt": 599,
-
-    "totalArea": "25 Acres",
-
-    "plotSizes": [
-      "1200 Sq.ft.",
-      "1500 Sq.ft.",
-      "1800 Sq.ft.",
-      "2400 Sq.ft."
-    ],
-
-    "image": "assets/images/projects/mountain-view/cover.webp",
-
+    "price": "₹5.99 Lakhs Onwards",
+    "pricePerSqFt": 499,
+    "thumbnail": "assets/images/projects/mountain-view/thumb.webp",
+    "coverImage": "assets/images/projects/mountain-view/cover.webp",
     "gallery": [
       "assets/images/projects/mountain-view/1.webp",
       "assets/images/projects/mountain-view/2.webp",
-      "assets/images/projects/mountain-view/3.webp"
+      "assets/images/projects/mountain-view/3.webp",
+      "assets/images/projects/mountain-view/4.webp"
     ],
-
+    "totalArea": "",
+    "plotSizes": [
+      "1200 Sq.Ft.",
+      "1500 Sq.Ft.",
+      "2000 Sq.Ft."
+    ],
     "amenities": [
       "Internal Roads",
       "Street Lights",
       "Water Supply",
-      "Garden",
-      "Children Play Area",
-      "24x7 Security"
+      "Garden"
     ],
-
     "features": [
-      "NA Plots",
       "Clear Title",
-      "Bank Loan Available",
+      "Loan Facility",
       "Immediate Registration"
     ],
-
     "brochure": "assets/brochures/mountain-view.pdf",
-
-    "googleMap": "https://maps.google.com",
-
-    "possession": "December 2026",
-
-    "rera": "P52100012345",
-
+    "googleMap": "",
+    "possession": "Ongoing",
+    "rera": "",
     "isFeatured": true
   },
   {
-    "id": 2,
+    "id": 10,
     "slug": "anant-world",
     "name": "Anant World",
-    "description": "Upcoming premium plotting project in Satara.",
-    "shortDescription": "Upcoming luxury plotting project.",
+    "shortDescription": "Upcoming premium plotting project.",
+    "description": "Anant World is an upcoming residential plotting project at Bhambe Patan, Satara.",
     "category": "Plots",
     "status": "Upcoming",
-
-    "location": "Satara",
-    "address": "Satara, Maharashtra",
-
-    "year": 2027,
-
-    "price": "Launching Soon",
-    "pricePerSqFt": 699,
-
-    "totalArea": "30 Acres",
-
-    "plotSizes": [
-      "1200 Sq.ft.",
-      "1500 Sq.ft."
+    "location": "Bhambe Patan, Satara",
+    "address": "Bhambe Patan, Satara, Maharashtra",
+    "year": 2026,
+    "price": "Coming Soon",
+    "pricePerSqFt": 0,
+    "thumbnail": "assets/images/projects/anant-world/thumb.webp",
+    "coverImage": "assets/images/projects/anant-world/cover.webp",
+    "gallery": [
+      "assets/images/projects/anant-world/1.webp",
+      "assets/images/projects/anant-world/2.webp",
+      "assets/images/projects/anant-world/3.webp"
     ],
-
-    "image": "assets/images/projects/anant-world/cover.webp",
-
-    "gallery": [],
-
-    "amenities": [
-      "Club House",
-      "Garden",
-      "Street Lights"
-    ],
-
-    "features": [
-      "Premium Location",
-      "Wide Roads"
-    ],
-
+    "totalArea": "",
+    "plotSizes": [],
+    "amenities": [],
+    "features": [],
     "brochure": "",
-
     "googleMap": "",
-
     "possession": "Coming Soon",
-
     "rera": "",
-
-    "isFeatured": true
-  },
-  {
-    "id": 3,
-    "slug": "goodwin-basera",
-    "name": "Goodwin Basera",
-    "description": "Completed residential plotting project.",
-    "shortDescription": "Completed premium project.",
-    "category": "Plots",
-    "status": "Completed",
-
-    "location": "Kanhephata",
-    "address": "Kanhephata, Maharashtra",
-
-    "year": 2021,
-
-    "price": "Sold Out",
-    "pricePerSqFt": 450,
-
-    "totalArea": "18 Acres",
-
-    "plotSizes": [
-      "1000 Sq.ft.",
-      "1200 Sq.ft."
-    ],
-
-    "image": "assets/images/projects/goodwin-basera/cover.webp",
-
-    "gallery": [],
-
-    "amenities": [
-      "Internal Roads",
-      "Water Supply"
-    ],
-
-    "features": [
-      "Sold Out",
-      "Clear Title"
-    ],
-
-    "brochure": "",
-
-    "googleMap": "",
-
-    "possession": "Completed",
-
-    "rera": "",
-
     "isFeatured": true
   }
 ]

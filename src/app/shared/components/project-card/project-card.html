@@ -1,7 +1,66 @@
-<a
-  class="view-details-btn"
-  [routerLink]="['/projects', project().slug]">
+<article class="project-card">
 
-  View Details →
+  <div class="project-image">
 
-</a>
+    <img
+      [src]="project().thumbnail"
+      [alt]="project().name"
+      loading="lazy">
+
+    <span
+      class="status-badge"
+      [ngClass]="project().status.toLowerCase()">
+
+      {{ project().status }}
+
+    </span>
+
+  </div>
+
+  <div class="project-content">
+
+    <span class="project-category">
+      {{ project().category }}
+    </span>
+
+    <h3 class="project-title">
+      {{ project().name }}
+    </h3>
+
+    <p class="project-description">
+      {{ project().shortDescription }}
+    </p>
+
+    <div class="project-meta">
+
+      <div class="meta-item">
+
+        <span class="icon">📍</span>
+
+        <span>{{ project().location }}</span>
+
+      </div>
+
+      <div class="meta-item">
+
+        <span class="icon">💰</span>
+
+        <span>{{ project().price }}</span>
+
+      </div>
+
+    </div>
+
+    <a
+      class="view-details-btn"
+      [routerLink]="['/projects', project().slug]">
+
+      View Details
+
+      <span>→</span>
+
+    </a>
+
+  </div>
+
+</article>
