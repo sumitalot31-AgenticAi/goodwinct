@@ -1,54 +1,80 @@
-<section
-  class="project-hero"
-  [style.background-image]="'linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(' + project().coverImage + ')'">
+<section class="project-hero">
 
-  <div class="container">
+  <img
+    class="hero-image"
+    [src]="project().coverImage"
+    [alt]="project().name">
 
-    <div class="hero-content">
+  <div class="hero-overlay">
 
-      <span
-        class="status"
-        [ngClass]="project().status.toLowerCase()">
+    <div class="container">
 
-        {{ project().status }}
+      <div class="hero-content">
 
-      </span>
+        <span
+          class="project-status"
+          [class.running]="project().status === 'Running'"
+          [class.upcoming]="project().status === 'Upcoming'"
+          [class.completed]="project().status === 'Completed'">
 
-      <h1>{{ project().name }}</h1>
+          {{ project().status }}
 
-      <p class="subtitle">
-        {{ project().shortDescription }}
-      </p>
-
-      <div class="hero-meta">
-
-        <span>📍 {{ project().location }}</span>
-
-        <span *ngIf="project().price">
-          💰 {{ project().price }}
         </span>
 
-      </div>
+        <h1>
 
-      <div class="hero-actions">
+          {{ project().name }}
 
-        <a
-          class="btn btn-primary"
-          routerLink="/contact">
+        </h1>
 
-          Book Site Visit
+        <p class="hero-location">
 
-        </a>
+          📍 {{ project().location }}
 
-        <a
-          *ngIf="project().brochure"
-          class="btn btn-outline"
-          [href]="project().brochure"
-          target="_blank">
+        </p>
 
-          Download Brochure
+        <p class="hero-description">
 
-        </a>
+          {{ project().shortDescription }}
+
+        </p>
+
+        <div class="hero-price">
+
+          <span>Starting From</span>
+
+          <h2>
+
+            {{ project().price }}
+
+          </h2>
+
+        </div>
+
+        <div class="hero-actions">
+
+          <a
+            href="#enquiry"
+            class="btn-primary">
+
+            Book Site Visit
+
+          </a>
+
+          @if (project().brochure) {
+
+          <a
+            [href]="project().brochure"
+            target="_blank"
+            class="btn-secondary">
+
+            Download Brochure
+
+          </a>
+
+          }
+
+        </div>
 
       </div>
 

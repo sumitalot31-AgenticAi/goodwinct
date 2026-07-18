@@ -1,57 +1,428 @@
 @if (project(); as currentProject) {
 
-  <app-project-hero
-    [project]="currentProject">
-  </app-project-hero>
+<app-project-hero
+  [project]="currentProject">
+</app-project-hero>
+
+<div class="container">
+
+  <app-project-gallery
+    [images]="currentProject.gallery">
+  </app-project-gallery>
+
+</div>
+
+<!-- =======================
+Project Overview
+======================= -->
+
+<section class="project-overview">
 
   <div class="container">
 
-    <app-project-gallery
-      [images]="currentProject.gallery">
-    </app-project-gallery>
+    <div class="overview-grid">
+
+      <div class="overview-content">
+
+        <span class="section-tag">
+          About Project
+        </span>
+
+        <h2>{{ currentProject.name }}</h2>
+
+        <p class="description">
+          {{ currentProject.description }}
+        </p>
+
+      </div>
+
+      <div class="overview-card">
+
+        <div class="info-item">
+          <span>Category</span>
+          <strong>{{ currentProject.category }}</strong>
+        </div>
+
+        <div class="info-item">
+          <span>Status</span>
+          <strong>{{ currentProject.status }}</strong>
+        </div>
+
+        <div class="info-item">
+          <span>Location</span>
+          <strong>{{ currentProject.location }}</strong>
+        </div>
+
+        <div class="info-item">
+          <span>Possession</span>
+          <strong>{{ currentProject.possession }}</strong>
+        </div>
+
+        <div class="info-item">
+          <span>Price</span>
+          <strong>{{ currentProject.price }}</strong>
+        </div>
+
+        <div class="info-item">
+          <span>Price / Sq.Ft.</span>
+          <strong>₹{{ currentProject.pricePerSqFt }}</strong>
+        </div>
+
+      </div>
+
+    </div>
 
   </div>
 
-  <section class="project-details">
+</section>
 
-    <div class="container">
+<!-- =======================
+Amenities
+======================= -->
 
-      <h1>{{ currentProject.name }}</h1>
+<section class="project-amenities">
 
-      <p>{{ currentProject.description }}</p>
+  <div class="container">
 
-      <hr>
+    <div class="section-heading">
 
-      <p><strong>Category:</strong> {{ currentProject.category }}</p>
+      <span class="section-tag">
+        Lifestyle
+      </span>
 
-      <p><strong>Status:</strong> {{ currentProject.status }}</p>
+      <h2>Project Amenities</h2>
 
-      <p><strong>Location:</strong> {{ currentProject.location }}</p>
-
-      <p><strong>Address:</strong> {{ currentProject.address }}</p>
-
-      <p><strong>Price:</strong> {{ currentProject.price }}</p>
-
-      <p><strong>Price / Sq.Ft:</strong> ₹{{ currentProject.pricePerSqFt }}</p>
-
-      <p><strong>Total Area:</strong> {{ currentProject.totalArea }}</p>
+      <p>
+        Thoughtfully designed amenities for a comfortable lifestyle.
+      </p>
 
     </div>
 
-  </section>
+    <div class="amenities-grid">
+
+      @for (amenity of currentProject.amenities; track amenity) {
+
+      <div class="amenity-card">
+
+        <div class="amenity-icon">
+          ✓
+        </div>
+
+        <h3>{{ amenity }}</h3>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =======================
+Plot Sizes
+======================= -->
+
+<section class="project-plots">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        Available Options
+      </span>
+
+      <h2>Plot Sizes</h2>
+
+    </div>
+
+    <div class="plots-grid">
+
+      @for (plot of currentProject.plotSizes; track plot) {
+
+      <div class="plot-card">
+
+        <h3>{{ plot }}</h3>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =======================
+Features
+======================= -->
+
+<section class="project-features">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        Why Choose Us
+      </span>
+
+      <h2>Project Features</h2>
+
+    </div>
+
+    <div class="features-grid">
+
+      @for (feature of currentProject.features; track feature) {
+
+      <div class="feature-card">
+
+        <div class="feature-icon">
+          ✓
+        </div>
+
+        <h3>{{ feature }}</h3>
+
+      </div>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =======================
+Brochure
+======================= -->
+
+<section class="project-brochure">
+
+  <div class="container">
+
+    <div class="brochure-card">
+
+      <div class="brochure-content">
+
+        <span class="section-tag">
+          Project Brochure
+        </span>
+
+        <h2>Download Brochure</h2>
+
+        <p>
+          Get complete information about layouts,
+          specifications, pricing and amenities.
+        </p>
+
+      </div>
+
+      <div class="brochure-action">
+
+        <a
+          [href]="currentProject.brochure"
+          target="_blank"
+          class="download-btn">
+
+          Download PDF
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =======================
+Enquiry
+======================= -->
+
+<section class="project-enquiry">
+
+  <div class="container">
+
+    <div class="enquiry-grid">
+
+      <div class="enquiry-content">
+
+        <span class="section-tag">
+          Site Visit
+        </span>
+
+        <h2>Book Your Free Site Visit</h2>
+
+        <p>
+          Our property experts will contact you shortly.
+        </p>
+
+        <ul>
+
+          <li>✔ Free Site Visit</li>
+
+          <li>✔ Free Consultation</li>
+
+          <li>✔ Loan Assistance</li>
+
+          <li>✔ Instant Booking</li>
+
+        </ul>
+
+      </div>
+
+      <div class="enquiry-form">
+
+        <form>
+
+          <input
+            type="text"
+            placeholder="Full Name">
+
+          <input
+            type="tel"
+            placeholder="Mobile Number">
+
+          <input
+            type="email"
+            placeholder="Email Address">
+
+          <textarea
+            rows="5"
+            placeholder="Message">
+          </textarea>
+
+          <button type="submit">
+
+            Book Site Visit
+
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =======================
+Location
+======================= -->
+
+<section class="project-location">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        Location
+      </span>
+
+      <h2>Project Location</h2>
+
+    </div>
+
+    <div class="location-grid">
+
+      <div class="location-card">
+
+        <h3>{{ currentProject.location }}</h3>
+
+        <p>{{ currentProject.address }}</p>
+
+      </div>
+
+      <div class="map-card">
+
+        @if (currentProject.googleMap) {
+
+        <iframe
+          [src]="currentProject.googleMap"
+          width="100%"
+          height="350"
+          loading="lazy"
+          style="border:0;">
+        </iframe>
+
+        } @else {
+
+        <div class="map-placeholder">
+
+          Google Map Coming Soon
+
+        </div>
+
+        }
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- =======================
+Related Projects
+======================= -->
+
+<section class="related-projects">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <span class="section-tag">
+        More Projects
+      </span>
+
+      <h2>You May Also Like</h2>
+
+      <p>
+        Explore more projects from Goodwin City.
+      </p>
+
+    </div>
+
+    <div class="related-grid">
+
+      @for (relatedProject of relatedProjects(); track relatedProject.id) {
+
+      <app-project-card
+        [project]="relatedProject">
+      </app-project-card>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>
 
 } @else {
 
-  <section class="project-not-found">
+<section class="project-not-found">
 
-    <div class="container">
+  <div class="container">
 
-      <h2>Project Not Found</h2>
+    <h2>Project Not Found</h2>
 
-      <p>The project you are looking for does not exist.</p>
+    <p>
+      The project you are looking for does not exist.
+    </p>
 
-    </div>
+  </div>
 
-  </section>
+</section>
 
 }

@@ -64,13 +64,28 @@ export class ProjectService {
   }
 
   getRelatedProjects(project: Project): Project[] {
-    return this.projects
-      .filter(
-        item =>
-          item.category === project.category &&
-          item.id !== project.id
-      )
-      .slice(0, 3);
-  }
+
+  return this.projects
+    .filter(item =>
+      item.id !== project.id &&
+      item.category === project.category &&
+      item.status !== 'Completed'
+    )
+    .sort((a, b) => {
+
+      const priority = {
+        Running: 1,
+        Upcoming: 2
+      };
+
+      return (
+        (priority[a.status as keyof typeof priority] ?? 99) -
+        (priority[b.status as keyof typeof priority] ?? 99)
+      );
+
+    })
+    .slice(0, 3);
+
+}
 
 }
