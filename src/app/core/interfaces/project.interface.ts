@@ -6,9 +6,9 @@ export interface Project {
 
   name: string;
 
-  shortDescription?: string;
-
   description: string;
+
+  shortDescription?: string;
 
   category: string;
 
@@ -24,7 +24,7 @@ export interface Project {
 
   pricePerSqFt?: number;
 
-  thumbnail: string;
+  cardImage: string;
 
   coverImage: string;
 
@@ -32,11 +32,11 @@ export interface Project {
 
   totalArea?: string;
 
-  plotSizes: string[];
+  plotSizes?: string[];
 
-  amenities: string[];
+  amenities?: string[];
 
-  features: string[];
+  features?: string[];
 
   brochure?: string;
 

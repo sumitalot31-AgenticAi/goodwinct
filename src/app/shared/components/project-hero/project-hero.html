@@ -1,0 +1,59 @@
+<section
+  class="project-hero"
+  [style.background-image]="'linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)), url(' + project().coverImage + ')'">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <span
+        class="status"
+        [ngClass]="project().status.toLowerCase()">
+
+        {{ project().status }}
+
+      </span>
+
+      <h1>{{ project().name }}</h1>
+
+      <p class="subtitle">
+        {{ project().shortDescription }}
+      </p>
+
+      <div class="hero-meta">
+
+        <span>📍 {{ project().location }}</span>
+
+        <span *ngIf="project().price">
+          💰 {{ project().price }}
+        </span>
+
+      </div>
+
+      <div class="hero-actions">
+
+        <a
+          class="btn btn-primary"
+          routerLink="/contact">
+
+          Book Site Visit
+
+        </a>
+
+        <a
+          *ngIf="project().brochure"
+          class="btn btn-outline"
+          [href]="project().brochure"
+          target="_blank">
+
+          Download Brochure
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

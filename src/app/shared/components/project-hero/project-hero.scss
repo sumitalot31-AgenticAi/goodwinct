@@ -1,0 +1,86 @@
+.project-hero {
+  min-height: 65vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 6rem 0;
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.status {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.status.running {
+  background: #2e7d32;
+}
+
+.status.completed {
+  background: #1565c0;
+}
+
+.status.upcoming {
+  background: #ef6c00;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  opacity: .95;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: .9rem 2rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.btn-primary {
+  background: #2e7d32;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1b5e20;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #2e7d32;
+}
