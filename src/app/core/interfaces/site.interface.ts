@@ -26,15 +26,15 @@ export interface Social {
   youtube: string;
 }
 
+export interface Location {
+  latitude: number;
+  longitude: number;
+}
+
 export interface Contact {
   whatsapp: string;
   googleMaps: string;
   location: Location;
-}
-
-export interface Location {
-  latitude: number;
-  longitude: number;
 }
 
 export interface Button {
@@ -58,6 +58,13 @@ export interface Footer {
   developer: string;
 }
 
+export interface About {
+  title: string;
+  subtitle: string;
+  banner: string;
+  breadcrumb: string;
+}
+
 export interface Site {
   company: Company;
   branding: Branding;
@@ -67,4 +74,5 @@ export interface Site {
   cta: Cta;
   seo: Seo;
   footer: Footer;
+  about: About;
 }

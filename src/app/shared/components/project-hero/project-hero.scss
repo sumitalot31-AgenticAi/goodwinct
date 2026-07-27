@@ -25,9 +25,9 @@
 
   background: linear-gradient(
     90deg,
-    rgba(0, 0, 0, .75) 0%,
-    rgba(0, 0, 0, .45) 50%,
-    rgba(0, 0, 0, .15) 100%
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45) 50%,
+    rgba(0, 0, 0, 0.15) 100%
   );
 }
 
@@ -45,31 +45,31 @@
   display: inline-flex;
   align-items: center;
 
-  padding: .55rem 1.25rem;
+  padding: 0.55rem 1.25rem;
 
   border-radius: 50px;
 
-  font-size: .9rem;
-
-  font-weight: 600;
-
   margin-bottom: 1.5rem;
 
-  letter-spacing: .05rem;
-
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
   text-transform: uppercase;
 }
 
 .project-status.running {
-  background: #2e7d32;
+  background: #b5fe18;
+  color: #000;
 }
 
 .project-status.upcoming {
   background: #ef6c00;
+  color: #fff;
 }
 
 .project-status.completed {
   background: #1565c0;
+  color: #fff;
 }
 
 .hero-content h1 {
@@ -80,14 +80,20 @@
   font-weight: 700;
 
   line-height: 1.1;
+
+  color: #fff;
 }
 
 .hero-location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
   margin: 1.5rem 0 1rem;
 
   font-size: 1.15rem;
 
-  opacity: .95;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .hero-description {
@@ -97,7 +103,7 @@
 
   line-height: 1.8;
 
-  opacity: .92;
+  color: rgba(255, 255, 255, 0.9);
 
   margin-bottom: 2rem;
 }
@@ -109,11 +115,11 @@
 .hero-price span {
   display: block;
 
-  font-size: .95rem;
+  font-size: 0.95rem;
 
-  opacity: .75;
+  color: rgba(255, 255, 255, 0.75);
 
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero-price h2 {
@@ -123,7 +129,7 @@
 
   font-weight: 700;
 
-  color: #fff;
+  color: #b5fe18;
 }
 
 .hero-actions {
@@ -142,38 +148,42 @@
 
   padding: 1rem 2rem;
 
-  border-radius: .75rem;
+  border-radius: 0.75rem;
 
   text-decoration: none;
 
   font-weight: 600;
 
-  transition: .3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn-primary {
-  background: #2e7d32;
-  color: #fff;
+  background: #b5fe18;
+  color: #000;
+  border: 2px solid #b5fe18;
 }
 
 .btn-primary:hover {
-  background: #1b5e20;
+  background: #9de500;
+  border-color: #9de500;
   transform: translateY(-2px);
 }
 
 .btn-secondary {
-  background: rgba(255,255,255,.15);
+  background: rgba(255, 255, 255, 0.15);
 
   color: #fff;
 
-  border: 2px solid rgba(255,255,255,.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
 
   backdrop-filter: blur(8px);
 }
 
 .btn-secondary:hover {
   background: #fff;
-  color: #2e7d32;
+  color: #82bf00;
+  border-color: #fff;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 768px) {
@@ -186,12 +196,21 @@
     text-align: center;
   }
 
+  .hero-location {
+    justify-content: center;
+  }
+
   .hero-actions {
     justify-content: center;
   }
 
   .hero-price h2 {
     font-size: 2.4rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
   }
 
 }

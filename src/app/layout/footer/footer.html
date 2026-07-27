@@ -107,56 +107,62 @@
 
   <!-- Bottom Footer -->
 
-  <div class="footer-bottom">
+<div class="footer-bottom">
 
-    <div class="container">
+  <div class="container">
 
-      <div class="social-links">
+    <div class="social-links">
 
-        <a
-          [href]="site().social.facebook"
-          target="_blank">
+      <a
+        [href]="site().social.facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Facebook">
 
-          Facebook
+        <i class="fa-brands fa-facebook-f"></i>
 
-        </a>
+      </a>
 
-        <a
-          [href]="site().social.instagram"
-          target="_blank">
+      <a
+        [href]="site().social.instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Instagram">
 
-          Instagram
+        <i class="fa-brands fa-instagram"></i>
 
-        </a>
+      </a>
 
-        <a
-          [href]="site().social.linkedin"
-          target="_blank">
+      <a
+        [href]="site().social.linkedin"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="LinkedIn">
 
-          LinkedIn
+        <i class="fa-brands fa-linkedin-in"></i>
 
-        </a>
+      </a>
 
-        <a
-          [href]="site().social.youtube"
-          target="_blank">
+      <a
+        [href]="site().social.youtube"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="YouTube">
 
-          YouTube
+        <i class="fa-brands fa-youtube"></i>
 
-        </a>
-
-      </div>
-
-      <p>
-
-        © {{ currentYear }}
-        {{ site().company.name }}.
-        All Rights Reserved.
-
-      </p>
+      </a>
 
     </div>
 
+    <p>
+      © {{ currentYear }}
+      {{ site().company.name }}.
+      All Rights Reserved.
+    </p>
+
   </div>
+
+</div>
 
 </footer>

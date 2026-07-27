@@ -1,6 +1,6 @@
 {
   "company": {
-    "name": "Goodwin City",
+    "name": "Goodwincity Landmark Developers Pvt. Ltd.",
     "tagline": "Building Dreams, Creating Communities",
     "phone": "+91 9876543210",
     "email": "info@goodwincity.com",
@@ -68,7 +68,7 @@
 
   "contact": {
     "whatsapp": "+919876543210",
-    "googleMaps": "https://maps.google.com/",
+    "googleMaps": "https://maps.app.goo.gl/T7RfmJdTbhXVSnJj7",
     "location": {
       "latitude": 18.5204,
       "longitude": 73.8567
@@ -104,5 +104,11 @@
   "footer": {
     "copyright": "© 2026 Goodwin City. All Rights Reserved.",
     "developer": "Developed by Goodwin City"
+  },
+ "about": {
+    "title": "About Goodwincity Landmark Developers Pvt. Ltd.",
+    "subtitle": "Building Dreams, Creating Better Communities",
+    "banner": "assets/images/about/about-banner.webp",
+    "breadcrumb": "About"
   }
 }

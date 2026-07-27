@@ -1,0 +1,47 @@
+<section class="about-hero">
+
+  <img
+    class="hero-image"
+    [src]="site.about.banner"
+    [alt]="site.company.name"
+  />
+
+  <div class="hero-overlay">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <span class="hero-badge">
+          {{ site.about.breadcrumb }}
+        </span>
+
+        <h1>
+          {{ site.about.title }}
+        </h1>
+
+        <p>
+          {{ site.about.subtitle }}
+        </p>
+
+        <nav class="breadcrumb">
+
+          <a routerLink="/">
+            Home
+          </a>
+
+          <span>/</span>
+
+          <span>
+            {{ site.about.breadcrumb }}
+          </span>
+
+        </nav>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

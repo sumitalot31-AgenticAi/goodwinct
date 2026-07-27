@@ -30,7 +30,7 @@ export class ProjectsShowcase {
     'All',
     'Running',
     'Upcoming',
-    'Completed',
+    'Completed',  
   ];
 
   get projects(): Project[] {

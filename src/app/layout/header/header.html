@@ -1,14 +1,18 @@
 @if (site(); as siteData) {
 <header class="top-header">
+
   <div class="container">
 
     <div class="header-left">
 
       <a
         [href]="'tel:' + siteData.company.phone"
-        class="header-link">
+        class="header-link"
+        aria-label="Call us">
 
-        <span class="material-symbols-outlined">call</span>
+        <span class="material-symbols-outlined">
+          call
+        </span>
 
         {{ siteData.company.phone }}
 
@@ -16,9 +20,12 @@
 
       <a
         [href]="'mailto:' + siteData.company.email"
-        class="header-link">
+        class="header-link"
+        aria-label="Email us">
 
-        <span class="material-symbols-outlined">mail</span>
+        <span class="material-symbols-outlined">
+          mail
+        </span>
 
         {{ siteData.company.email }}
 
@@ -38,36 +45,41 @@
 
     <div class="header-right">
 
-      <a
-        [href]="siteData.social.facebook"
-        target="_blank"
-        aria-label="Facebook">
-        Facebook
-      </a>
+  <a
+    [href]="siteData.social.facebook"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
 
-      <a
-        [href]="siteData.social.instagram"
-        target="_blank"
-        aria-label="Instagram">
-        Instagram
-      </a>
+  <a
+    [href]="siteData.social.instagram"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
 
-      <a
-        [href]="siteData.social.linkedin"
-        target="_blank"
-        aria-label="LinkedIn">
-        LinkedIn
-      </a>
+  <a
+    [href]="siteData.social.linkedin"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn">
+    <i class="fa-brands fa-linkedin-in"></i>
+  </a>
 
-      <a
-        [href]="siteData.social.youtube"
-        target="_blank"
-        aria-label="YouTube">
-        YouTube
-      </a>
+  <a
+    [href]="siteData.social.youtube"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="YouTube">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
 
-    </div>
+</div>
 
   </div>
+
 </header>
 }

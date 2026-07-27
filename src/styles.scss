@@ -6,7 +6,7 @@
 @use '@angular/material' as mat;
 @use './styles/abstracts';
 @use './styles/base';
-
+@import "@fortawesome/fontawesome-free/css/all.min.css";
 html {
   height: 100%;
   @include mat.theme(
@@ -39,3 +39,34 @@ body {
   height: 100%;
 }
 /* You can add global styles to this file, and also import other style files */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.25rem;
+    height: 2.25rem;
+
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #ffffff;
+      color: #7ac943;
+      transform: translateY(-2px);
+    }
+
+    i {
+      font-size: 1rem;
+    }
+  }
+}

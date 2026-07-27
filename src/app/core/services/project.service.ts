@@ -87,5 +87,4 @@ export class ProjectService {
     .slice(0, 3);
 
 }
-
 }
