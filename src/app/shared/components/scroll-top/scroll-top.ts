@@ -1,9 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, signal } from '@angular/core';
+
 
 @Component({
   selector: 'app-scroll-top',
-  imports: [],
+  standalone: true,
   templateUrl: './scroll-top.html',
-  styleUrl: './scroll-top.scss',
+  styleUrl: './scroll-top.scss'
 })
-export class ScrollTop {}
+export class ScrollTopComponent {
+
+
+  showButton = signal(false);
+
+
+
+  @HostListener('window:scroll')
+  onScroll() {
+
+    this.showButton.set(window.scrollY > 400);
+
+  }
+
+
+
+  scrollToTop() {
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+
+  }
+
+
+}

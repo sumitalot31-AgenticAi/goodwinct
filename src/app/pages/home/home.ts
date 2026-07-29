@@ -8,8 +8,8 @@ import { WhyChooseUs } from '../../shared/components/why-choose-us/why-choose-us
 import { StatsCounter } from '../../shared/components/stats-counter/stats-counter';
 import { TestimonialsSection } from '../../shared/components/testimonials-section/testimonials-section';
 import { LatestBlogsComponent } from '../../shared/components/latest-blogs/latest-blogs';
-import { ContactCta } from '../../shared/components/contact-cta/contact-cta';
-import { GoogleMap } from '../../shared/components/google-map/google-map';
+import { ContactCtaComponent  } from '../../shared/components/contact-cta/contact-cta';
+import { GoogleMapComponent } from '../../shared/components/google-map/google-map';
 
 @Component({
   selector: 'app-home',
@@ -23,8 +23,8 @@ import { GoogleMap } from '../../shared/components/google-map/google-map';
     StatsCounter,
     TestimonialsSection,
     LatestBlogsComponent ,
-    ContactCta,
-    GoogleMap,
+    ContactCtaComponent,
+    GoogleMapComponent,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',

@@ -8,7 +8,7 @@ import { SiteService } from '../../core/services/site.service';
 import { Header } from '../header/header';
 import { Navbar } from '../navbar/navbar';
 import { Footer } from '../footer/footer';
-import { ScrollTop } from '../../shared/components/scroll-top/scroll-top';
+import { ScrollTopComponent  } from '../../shared/components/scroll-top/scroll-top';
 
 @Component({
   selector: 'app-main-layout',
@@ -19,7 +19,7 @@ import { ScrollTop } from '../../shared/components/scroll-top/scroll-top';
     Header,
     Navbar,
     Footer,
-    ScrollTop,
+    ScrollTopComponent ,
   ],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',

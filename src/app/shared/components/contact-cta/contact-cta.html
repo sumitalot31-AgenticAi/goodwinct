@@ -1,1 +1,108 @@
-<p>contact-cta works!</p>
+<section class="contact-cta">
+
+  <div class="container">
+
+    <div class="cta-wrapper">
+
+
+      <div class="cta-content">
+
+
+        <span class="tag">
+          Get In Touch
+        </span>
+
+
+        <h2>
+          {{ contact.title }}
+        </h2>
+
+
+        <p>
+          {{ contact.description }}
+        </p>
+
+
+
+        <div class="cta-actions">
+
+
+          <a
+            class="primary-btn"
+            [routerLink]="contact.buttonLink">
+
+            {{ contact.buttonText }}
+
+          </a>
+
+
+
+          <a
+            class="call-btn"
+            [href]="'tel:' + contact.phone">
+
+            Call Now
+
+          </a>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <div class="cta-info">
+
+
+        <div class="info-item">
+
+          <span>
+            Phone
+          </span>
+
+          <strong>
+            {{ contact.phone }}
+          </strong>
+
+        </div>
+
+
+
+        <div class="info-item">
+
+          <span>
+            Email
+          </span>
+
+          <strong>
+            {{ contact.email }}
+          </strong>
+
+        </div>
+
+
+
+        <div class="info-item">
+
+          <span>
+            Office Hours
+          </span>
+
+          <strong>
+            {{ contact.officeHours }}
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>

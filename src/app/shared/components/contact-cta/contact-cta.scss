@@ -1,0 +1,260 @@
+@use '../../../../styles/abstracts' as *;
+
+
+.contact-cta {
+
+  padding:100px 0;
+
+  background:$primary;
+
+
+
+  .cta-wrapper {
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:50px;
+
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:60px;
+
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.12);
+
+
+
+    @include tablet {
+
+      flex-direction:column;
+
+      padding:40px;
+
+    }
+
+
+
+    @include mobile {
+
+      padding:30px;
+
+    }
+
+  }
+
+
+
+
+
+  .cta-content {
+
+    flex:1;
+
+
+
+    .tag {
+
+      display:inline-block;
+
+      color:$primary;
+
+      font-size:14px;
+
+      font-weight:700;
+
+      text-transform:uppercase;
+
+      letter-spacing:2px;
+
+      margin-bottom:15px;
+
+    }
+
+
+
+
+    h2 {
+
+      font-size:42px;
+
+      line-height:1.2;
+
+      margin-bottom:20px;
+
+
+
+      @include mobile {
+
+        font-size:30px;
+
+      }
+
+    }
+
+
+
+
+    p {
+
+      color:#666;
+
+      line-height:1.8;
+
+      margin-bottom:30px;
+
+    }
+
+
+
+  }
+
+
+
+
+
+  .cta-actions {
+
+    display:flex;
+
+    gap:15px;
+
+
+    @include mobile {
+
+      flex-direction:column;
+
+    }
+
+
+
+    a {
+
+      padding:14px 30px;
+
+      border-radius:50px;
+
+      font-weight:600;
+
+      transition:.3s;
+
+      text-align:center;
+
+    }
+
+
+
+
+    .primary-btn {
+
+      background:$primary;
+
+      color:#fff;
+
+
+
+      &:hover {
+
+        transform:translateY(-3px);
+
+      }
+
+    }
+
+
+
+
+    .call-btn {
+
+      border:2px solid $primary;
+
+      color:$primary;
+
+
+
+      &:hover {
+
+        background:$primary;
+
+        color:#fff;
+
+      }
+
+    }
+
+  }
+
+
+
+
+
+  .cta-info {
+
+    min-width:320px;
+
+    background:#f8f8f8;
+
+    padding:30px;
+
+    border-radius:20px;
+
+
+
+    @include mobile {
+
+      width:100%;
+
+      min-width:auto;
+
+    }
+
+
+
+
+    .info-item {
+
+      margin-bottom:25px;
+
+
+
+      &:last-child {
+
+        margin-bottom:0;
+
+      }
+
+
+
+      span {
+
+        display:block;
+
+        font-size:13px;
+
+        color:#777;
+
+        margin-bottom:6px;
+
+      }
+
+
+
+      strong {
+
+        font-size:16px;
+
+      }
+
+    }
+
+  }
+
+
+}

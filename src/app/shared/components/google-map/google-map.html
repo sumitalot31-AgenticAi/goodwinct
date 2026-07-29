@@ -1,1 +1,57 @@
-<p>google-map works!</p>
+
+<section class="google-map">
+
+  <div class="container">
+
+
+    <div class="map-wrapper">
+
+
+      <div class="map-content">
+
+        <span>
+          Visit Us
+        </span>
+
+
+        <h2>
+          Our Location
+        </h2>
+
+
+        <p>
+          {{ contact.address }}
+        </p>
+
+
+        <p>
+          {{ contact.officeHours }}
+        </p>
+
+
+      </div>
+
+
+
+      <div class="map-frame">
+
+
+        <iframe
+            [src]="mapUrl"
+            width="100%"
+            height="450"
+            style="border:0;"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
