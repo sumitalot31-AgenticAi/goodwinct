@@ -1,0 +1,15 @@
+{
+  "title": "About Goodwincity",
+
+  "subtitle": "Building Dreams, Creating Communities",
+
+  "description": "Goodwincity Landmark Developers Pvt. Ltd. is committed to delivering premium residential developments with quality construction, modern infrastructure and thoughtfully planned communities. Our focus is on creating homes and investment opportunities that provide lasting value and a better lifestyle.",
+
+  "image": "assets/images/about/about-home.webp",
+
+  "experience": "10+",
+  "experienceText": "Years of Excellence",
+
+  "buttonText": "Know More",
+  "buttonRoute": "/about"
+}

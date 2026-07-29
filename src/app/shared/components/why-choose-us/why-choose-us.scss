@@ -1,0 +1,193 @@
+@use '../../../../styles/abstracts' as *;
+
+/* ==========================================
+   Why Choose Us
+========================================== */
+
+.why-choose-us {
+
+  padding: 7rem 0;
+
+  background: #f8fafc;
+
+}
+
+.container {
+
+  @include container;
+
+}
+
+/* ==========================================
+   Heading
+========================================== */
+
+.section-header {
+
+  max-width: 720px;
+
+  margin: 0 auto 4rem;
+
+  text-align: center;
+
+}
+
+.section-subtitle {
+
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  color: $primary;
+
+  font-size: .95rem;
+
+  font-weight: 700;
+
+  letter-spacing: .12rem;
+
+  text-transform: uppercase;
+
+}
+
+.section-header h2 {
+
+  margin-bottom: 1rem;
+
+  color: #1f2937;
+
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+
+  font-weight: 800;
+
+}
+
+.section-header p {
+
+  color: #6b7280;
+
+  font-size: 1.05rem;
+
+  line-height: 1.8;
+
+}
+
+/* ==========================================
+   Cards
+========================================== */
+
+.why-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 2rem;
+
+}
+
+.why-card {
+
+  padding: 2.5rem 2rem;
+
+  background: $white;
+
+  border-radius: 1.25rem;
+
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(0,0,0,.08);
+
+  transition: .35s ease;
+
+}
+
+.why-card:hover {
+
+  transform: translateY(-10px);
+
+  box-shadow: 0 20px 45px rgba(0,0,0,.15);
+
+}
+
+.icon {
+
+  width: 80px;
+
+  height: 80px;
+
+  margin: 0 auto 1.5rem;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(181,254,24,.15);
+
+}
+
+.material-symbols-outlined {
+
+  color: $primary;
+
+  font-size: 2.5rem;
+
+}
+
+.why-card h3 {
+
+  margin-bottom: 1rem;
+
+  color: #1f2937;
+
+  font-size: 1.35rem;
+
+  font-weight: 700;
+
+}
+
+.why-card p {
+
+  color: #6b7280;
+
+  line-height: 1.8;
+
+}
+
+/* ==========================================
+   Tablet
+========================================== */
+
+@include tablet {
+
+  .why-grid {
+
+    grid-template-columns: repeat(2, 1fr);
+
+  }
+
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@include mobile {
+
+  .why-choose-us {
+
+    padding: 5rem 0;
+
+  }
+
+  .why-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+}

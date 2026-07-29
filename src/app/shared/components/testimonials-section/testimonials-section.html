@@ -1,1 +1,57 @@
-<p>testimonials-section works!</p>
+<section class="testimonials">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span>
+        {{ testimonials.subtitle }}
+      </span>
+
+      <h2>
+        {{ testimonials.title }}
+      </h2>
+
+      <p>
+        {{ testimonials.description }}
+      </p>
+
+    </div>
+
+    <div class="testimonial-grid">
+
+      @for (item of testimonials.items; track item.id) {
+
+        <article class="testimonial-card">
+
+          <img
+            [src]="item.image"
+            [alt]="item.name">
+
+          <div class="stars">
+            @for (star of [].constructor(item.rating); track $index) {
+              ★
+            }
+          </div>
+
+          <p class="review">
+            "{{ item.review }}"
+          </p>
+
+          <h3>
+            {{ item.name }}
+          </h3>
+
+          <span class="location">
+            {{ item.location }}
+          </span>
+
+        </article>
+
+      }
+
+    </div>
+
+  </div>
+
+</section>

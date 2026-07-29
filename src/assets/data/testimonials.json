@@ -1,0 +1,32 @@
+{
+  "title": "What Our Customers Say",
+  "subtitle": "Testimonials",
+  "description": "Hear from happy homeowners and investors who trusted Goodwincity Landmark Developers.",
+
+  "items": [
+    {
+      "id": 1,
+      "name": "Rahul Patil",
+      "location": "Pune",
+      "rating": 5,
+      "image": "assets/images/testimonials/client-1.webp",
+      "review": "The entire buying process was smooth and transparent. The team guided us at every step and delivered exactly what was promised."
+    },
+    {
+      "id": 2,
+      "name": "Sneha Kulkarni",
+      "location": "Satara",
+      "rating": 5,
+      "image": "assets/images/testimonials/client-2.webp",
+      "review": "Excellent project location and quality development. We are happy to invest with Goodwincity."
+    },
+    {
+      "id": 3,
+      "name": "Amit Deshmukh",
+      "location": "Kolhapur",
+      "rating": 5,
+      "image": "assets/images/testimonials/client-3.webp",
+      "review": "Professional staff, clear documentation, and timely support made our experience outstanding."
+    }
+  ]
+}

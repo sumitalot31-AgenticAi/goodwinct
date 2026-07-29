@@ -9,10 +9,10 @@
   },
 
   "branding": {
-    "logo": "assets/images/logo/logo.svg",
-    "logoLight": "assets/images/logo/logo-light.svg",
-    "favicon": "assets/images/logo/favicon.ico"
-  },
+  "logo": "assets/images/logo/logo-lig.svg",
+  "logoLight": "assets/images/logo/logight.svg",
+  "favicon": "assets/images/logo/favicon.ico"
+},
 
   "navigation": [
     {

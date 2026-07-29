@@ -7,7 +7,7 @@ import { AboutSection } from '../../shared/components/about-section/about-sectio
 import { WhyChooseUs } from '../../shared/components/why-choose-us/why-choose-us';
 import { StatsCounter } from '../../shared/components/stats-counter/stats-counter';
 import { TestimonialsSection } from '../../shared/components/testimonials-section/testimonials-section';
-import { LatestBlogs } from '../../shared/components/latest-blogs/latest-blogs';
+import { LatestBlogsComponent } from '../../shared/components/latest-blogs/latest-blogs';
 import { ContactCta } from '../../shared/components/contact-cta/contact-cta';
 import { GoogleMap } from '../../shared/components/google-map/google-map';
 
@@ -22,7 +22,7 @@ import { GoogleMap } from '../../shared/components/google-map/google-map';
     WhyChooseUs,
     StatsCounter,
     TestimonialsSection,
-    LatestBlogs,
+    LatestBlogsComponent ,
     ContactCta,
     GoogleMap,
   ],

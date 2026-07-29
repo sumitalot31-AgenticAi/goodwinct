@@ -1,1 +1,40 @@
-<p>stats-counter works!</p>
+<section
+  #statsSection
+  class="stats-counter">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-subtitle">
+        {{ stats.subtitle }}
+      </span>
+
+      <h2>
+        {{ stats.title }}
+      </h2>
+
+    </div>
+
+    <div class="stats-grid">
+
+      @for (item of stats.items; track item.label; let i = $index) {
+
+  <div class="stat-card">
+
+    <h3>
+      {{ counters()[i] }}{{ item.suffix }}
+    </h3>
+
+    <p>
+      {{ item.label }}
+    </p>
+
+  </div>
+
+}
+    </div>
+
+  </div>
+
+</section>

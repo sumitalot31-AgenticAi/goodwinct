@@ -1,1 +1,69 @@
-<p>blog-card works!</p>
+<article class="blog-card">
+
+
+  <!-- Image -->
+
+  <div class="blog-image">
+
+    <img
+      [src]="blog().image"
+      [alt]="blog().title">
+
+
+    <span class="category">
+      {{ blog().category }}
+    </span>
+
+  </div>
+
+
+
+  <!-- Content -->
+
+  <div class="blog-content">
+
+
+    <div class="blog-meta">
+
+      <span>
+        {{ blog().date }}
+      </span>
+
+
+      <span>
+        {{ blog().readTime }}
+      </span>
+
+    </div>
+
+
+
+    <h3>
+      {{ blog().title }}
+    </h3>
+
+
+
+    <p>
+      {{ blog().shortDescription }}
+    </p>
+
+
+
+    <a
+      class="read-more"
+      [routerLink]="['/blog', blog().slug]">
+
+      Read More
+
+      <span>
+        →
+      </span>
+
+    </a>
+
+
+  </div>
+
+
+</article>

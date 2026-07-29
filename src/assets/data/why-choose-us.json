@@ -1,0 +1,30 @@
+{
+  "title": "Why Choose Goodwincity",
+
+  "subtitle": "Why Choose Us",
+
+  "description": "We combine quality construction, transparent dealings and customer-centric services to deliver exceptional residential developments.",
+
+  "items": [
+    {
+      "icon": "workspace_premium",
+      "title": "Premium Quality",
+      "description": "High-quality construction with modern infrastructure."
+    },
+    {
+      "icon": "location_on",
+      "title": "Prime Locations",
+      "description": "Projects strategically located with excellent connectivity."
+    },
+    {
+      "icon": "verified",
+      "title": "Trusted Developer",
+      "description": "Transparent processes and customer-first approach."
+    },
+    {
+      "icon": "support_agent",
+      "title": "Lifetime Support",
+      "description": "Dedicated assistance before and after your purchase."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Our Achievements",
+  "subtitle": "Numbers That Speak",
+  "items": [
+    {
+      "value": 10,
+      "suffix": "+",
+      "label": "Years of Experience"
+    },
+    {
+      "value": 500,
+      "suffix": "+",
+      "label": "Happy Families"
+    },
+    {
+      "value": 15,
+      "suffix": "+",
+      "label": "Projects Delivered"
+    },
+    {
+      "value": 250,
+      "suffix": "+",
+      "label": "Acres Developed"
+    }
+  ]
+}

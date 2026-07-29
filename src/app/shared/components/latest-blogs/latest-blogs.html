@@ -1,1 +1,69 @@
-<p>latest-blogs works!</p>
+<section class="latest-blogs">
+
+  <div class="container">
+
+
+    <!-- Section Header -->
+
+    <div class="section-header">
+
+      <span class="section-tag">
+        Our Blog
+      </span>
+
+
+      <h2>
+        Latest Real Estate Insights
+      </h2>
+
+
+      <p>
+        Stay updated with property trends,
+        investment tips and latest developments.
+      </p>
+
+    </div>
+
+
+
+    <!-- Blog Cards -->
+
+    <div class="blogs-grid">
+
+
+      @for (blog of blogs; track blog.id) {
+
+        <app-blog-card
+          [blog]="blog">
+        </app-blog-card>
+
+      }
+
+
+    </div>
+
+
+
+    <!-- Button -->
+
+    <div class="section-footer">
+
+      <a 
+        routerLink="/blog"
+        class="view-btn">
+
+        View All Blogs
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+    </div>
+
+
+  </div>
+
+
+</section>

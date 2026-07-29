@@ -12,24 +12,22 @@
     box-shadow: $shadow-md;
   }
 }
-
 .container {
-  @include container;
-  @include flex-between;
-  min-height: 82px;
-  position: relative;
-}
+  max-width: 1320px;
+  margin: 0 auto;
 
-.logo {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
-  img {
-    height: 60px;
-    display: block;
-  }
+  padding: 0 1.5rem;
+  min-height: 82px;
 }
-
+.logo img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
 /* ===========================
    Desktop Navigation
 =========================== */
@@ -187,7 +185,8 @@
   }
 
   .logo img {
-    height: 52px;
+    max-width: 170px;
+    max-height: 48px;
   }
 
   .nav-menu,
@@ -210,7 +209,6 @@
     right: 0;
 
     background: $white;
-
     box-shadow: $shadow-md;
 
     max-height: 0;
@@ -224,9 +222,9 @@
   }
 
   .mobile-nav ul {
-    list-style: none;
     margin: 0;
     padding: 1rem;
+    list-style: none;
   }
 
   .mobile-nav li {
@@ -235,7 +233,6 @@
 
   .mobile-nav a {
     display: block;
-
     padding: .9rem 0;
 
     color: $text-primary;
@@ -244,7 +241,7 @@
   }
 
   .mobile-submenu {
-    padding-left: 1rem !important;
+    padding-left: 1rem;
   }
 
   .mobile-submenu li {
@@ -259,12 +256,11 @@
   .mobile-cta {
     display: inline-block;
     margin-top: 1rem;
-
     padding: .9rem 1.25rem;
 
     background: $primary-700;
-    color: $white !important;
-
+    color: $white;
     border-radius: $radius-md;
   }
+
 }

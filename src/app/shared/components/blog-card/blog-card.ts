@@ -1,9 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
+
+import { Blog } from '../../../core/interfaces/blog.interface';
+
 
 @Component({
   selector: 'app-blog-card',
-  imports: [],
+  standalone: true,
+  imports: [
+    RouterLink
+  ],
   templateUrl: './blog-card.html',
-  styleUrl: './blog-card.scss',
+  styleUrl: './blog-card.scss'
 })
-export class BlogCard {}
+export class BlogCardComponent {
+
+  blog = input.required<Blog>();
+
+}
