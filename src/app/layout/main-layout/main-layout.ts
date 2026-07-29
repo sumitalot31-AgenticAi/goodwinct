@@ -9,7 +9,8 @@ import { Header } from '../header/header';
 import { Navbar } from '../navbar/navbar';
 import { Footer } from '../footer/footer';
 import { ScrollTopComponent  } from '../../shared/components/scroll-top/scroll-top';
-
+import { FloatingActionsComponent } from '../../shared/components/floating-actions/floating-actions';
+import { WelcomePopupComponent } from '../../shared/components/welcome-popup/welcome-popup';
 @Component({
   selector: 'app-main-layout',
   standalone: true,
@@ -20,6 +21,8 @@ import { ScrollTopComponent  } from '../../shared/components/scroll-top/scroll-t
     Navbar,
     Footer,
     ScrollTopComponent ,
+    FloatingActionsComponent,
+    WelcomePopupComponent,
   ],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',

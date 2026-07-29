@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "showOnce": true,
+
+  "title": "Welcome to Goodwincity",
+
+  "subtitle": "Building Dreams, Creating Better Communities",
+
+  "description": "Explore premium plots, apartments, villas and investment opportunities designed for modern living.",
+
+  "image": "assets/images/popup/launch-banner.webp",
+
+  "primaryButton": {
+    "text": "Explore Projects",
+    "route": "/projects"
+  },
+
+  "secondaryButton": {
+    "text": "Continue to Website",
+    "route": "/"
+  }
+}

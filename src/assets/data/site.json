@@ -9,8 +9,8 @@
   },
 
   "branding": {
-  "logo": "assets/images/logo/logo-lig.svg",
-  "logoLight": "assets/images/logo/logight.svg",
+  "logo": "assets/images/logo/logo-light.svg",
+  "logoLight": "assets/images/logo/logo-light.svg",
   "favicon": "assets/images/logo/favicon.ico"
 },
 

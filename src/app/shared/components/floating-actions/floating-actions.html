@@ -1,0 +1,15 @@
+@if (data.whatsapp.enabled) {
+  <div class="floating-actions">
+    <a
+      class="whatsapp-btn"
+      [href]="whatsappLink"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      <img
+        [src]="data.whatsapp.icon"
+        alt="WhatsApp">
+
+    </a>
+  </div>
+}
