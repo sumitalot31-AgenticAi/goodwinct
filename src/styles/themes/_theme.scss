@@ -1,0 +1,89 @@
+@use '../abstracts' as *;
+
+:root {
+  /* ==========================================
+     BRAND COLORS
+  ========================================== */
+
+  --color-primary: #{$primary};
+  --color-primary-light: #{$primary-light};
+  --color-primary-dark: #{$primary-dark};
+  --color-primary-hover: #{$primary-hover};
+
+  /* ==========================================
+     SURFACES
+  ========================================== */
+
+  --color-background: #{$background};
+  --color-surface: #{$surface};
+  --color-surface-secondary: #{$surface-secondary};
+
+  /* ==========================================
+     TEXT
+  ========================================== */
+
+  --color-text-primary: #{$text-primary};
+  --color-text-secondary: #{$text-secondary};
+  --color-text-muted: #{$text-muted};
+  --color-text-light: #{$text-light};
+
+  /* ==========================================
+     BORDERS
+  ========================================== */
+
+  --color-border: #{$border};
+  --color-border-light: #{$border-light};
+  --color-border-dark: #{$border-dark};
+
+  /* ==========================================
+     STATUS
+  ========================================== */
+
+  --color-success: #{$success};
+  --color-warning: #{$warning};
+  --color-error: #{$error};
+  --color-info: #{$info};
+
+  /* ==========================================
+     BORDER RADIUS
+  ========================================== */
+
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+
+  /* ==========================================
+     SHADOWS
+  ========================================== */
+
+  --shadow-sm: #{$shadow-sm};
+  --shadow-md: #{$shadow-md};
+  --shadow-lg: #{$shadow-lg};
+
+  /* ==========================================
+     TRANSITIONS
+  ========================================== */
+
+  --transition-fast: #{$transition-fast};
+  --transition-base: #{$transition-base};
+  --transition-slow: #{$transition-slow};
+
+  /* ==========================================
+     TYPOGRAPHY
+  ========================================== */
+
+  --font-primary: #{$font-primary};
+  --font-secondary: #{$font-secondary};
+
+  --text-base: #{$text-base};
+  --text-lg: #{$text-lg};
+  --text-xl: #{$text-xl};
+
+  /* ==========================================
+     LAYOUT
+  ========================================== */
+
+  --container-width: #{$container-max-width};
+  --header-height: #{$header-height};
+}

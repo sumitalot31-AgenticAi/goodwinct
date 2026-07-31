@@ -1,0 +1,29 @@
+@use '../abstracts' as *;
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+
+  height: $header-height;
+
+  z-index: $z-sticky;
+
+  display: flex;
+  align-items: center;
+
+  background: rgba($white, .95);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: $shadow-sm;
+
+  @include transition(all);
+}
+
+.site-header.scrolled {
+  box-shadow: $shadow-md;
+}

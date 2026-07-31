@@ -57,11 +57,19 @@
 }
 
 .text-primary {
-  color: $primary-500 !important;
+  color: $primary !important;
 }
 
 .text-secondary {
   color: $text-secondary !important;
+}
+
+.text-muted {
+  color: $text-muted !important;
+}
+
+.text-dark {
+  color: $text-primary !important;
 }
 
 .text-white {
@@ -69,11 +77,11 @@
 }
 
 /* ==========================================
-   BACKGROUND
+   BACKGROUNDS
 ========================================== */
 
 .bg-primary {
-  background-color: $primary-500 !important;
+  background-color: $primary !important;
 }
 
 .bg-white {
@@ -84,12 +92,20 @@
   background-color: $background !important;
 }
 
+.bg-surface {
+  background-color: $surface !important;
+}
+
+.bg-secondary {
+  background-color: $surface-secondary !important;
+}
+
 /* ==========================================
    WIDTH
 ========================================== */
 
 .w-100 {
-  width: 100%;
+  width: 100% !important;
 }
 
 /* ==========================================
@@ -97,15 +113,79 @@
 ========================================== */
 
 .mt-auto {
-  margin-top: auto;
+  margin-top: auto !important;
 }
 
 .mx-auto {
-  margin-inline: auto;
+  margin-inline: auto !important;
 }
 
 .my-auto {
-  margin-block: auto;
+  margin-block: auto !important;
+}
+
+/* ==========================================
+   BORDER RADIUS
+========================================== */
+
+.rounded-sm {
+  border-radius: $radius-sm !important;
+}
+
+.rounded-md {
+  border-radius: $radius-md !important;
+}
+
+.rounded-lg {
+  border-radius: $radius-lg !important;
+}
+
+.rounded-xl {
+  border-radius: $radius-xl !important;
+}
+
+.rounded-full {
+  border-radius: $radius-full !important;
+}
+
+/* ==========================================
+   SHADOWS
+========================================== */
+
+.shadow-sm {
+  box-shadow: $shadow-sm !important;
+}
+
+.shadow-md {
+  box-shadow: $shadow-md !important;
+}
+
+.shadow-lg {
+  box-shadow: $shadow-lg !important;
+}
+
+/* ==========================================
+   CURSORS
+========================================== */
+
+.cursor-pointer {
+  cursor: pointer !important;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+/* ==========================================
+   OVERFLOW
+========================================== */
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
 }
 
 /* ==========================================
@@ -113,19 +193,19 @@
 ========================================== */
 
 .img-fluid {
+  display: block;
   width: 100%;
   height: auto;
-  display: block;
 }
 
 /* ==========================================
    VISIBILITY
 ========================================== */
 
-.hidden {
-  display: none !important;
+.invisible {
+  visibility: hidden !important;
 }
 
 .visible {
-  display: block !important;
+  visibility: visible !important;
 }

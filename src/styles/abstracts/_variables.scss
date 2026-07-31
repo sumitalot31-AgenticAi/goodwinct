@@ -1,4 +1,6 @@
 @use './colors' as *;
+@use './spacing' as *;
+@use './typography' as *;
 
 /* ==========================================
    LAYOUT
@@ -6,7 +8,19 @@
 
 $container-max-width: 1320px;
 $container-padding: 1rem;
+
 $header-height: 5rem;
+$footer-padding: 5rem;
+
+/* ==========================================
+   CONTAINERS
+========================================== */
+
+$container-sm: 540px;
+$container-md: 720px;
+$container-lg: 960px;
+$container-xl: 1140px;
+$container-xxl: 1320px;
 
 /* ==========================================
    BORDER RADIUS
@@ -45,14 +59,25 @@ $z-sticky: 1020;
 $z-fixed: 1030;
 $z-modal-backdrop: 1040;
 $z-modal: 1050;
-$z-tooltip: 1060;
+$z-popover: 1060;
+$z-tooltip: 1070;
+$z-toast: 1080;
 
 /* ==========================================
    COMMON SIZES
 ========================================== */
 
+$button-height-sm: 2.5rem;
 $button-height: 3rem;
+$button-height-lg: 3.5rem;
+
 $input-height: 3.25rem;
+
+$icon-xs: 0.875rem;
+$icon-sm: 1rem;
+$icon-md: 1.25rem;
+$icon-lg: 1.5rem;
+$icon-xl: 2rem;
 
 /* ==========================================
    SECTION SPACING
@@ -60,3 +85,39 @@ $input-height: 3.25rem;
 
 $section-padding-y: 6rem;
 $section-padding-y-mobile: 4rem;
+
+$section-gap: 2rem;
+
+/* ==========================================
+   GRID
+========================================== */
+
+$grid-gap: 1.5rem;
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+$animation-fast: 200ms;
+$animation-normal: 300ms;
+$animation-slow: 500ms;
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+$button-height-sm: 2.5rem;
+$button-height-lg: 3.5rem;
+
+$button-padding-x: $space-6;
+$button-padding-y: $space-3;
+
+$button-font-size: $text-base;
+$button-font-weight: $font-medium;
+$button-line-height: $leading-normal;
+
+/* ==========================================
+   CARDS
+========================================== */
+
+$card-padding: $space-6;

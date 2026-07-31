@@ -1,26 +1,65 @@
-/* ==========================================
-   FONT IMPORTS
-========================================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+@use './colors' as *;
 
 /* ==========================================
    FONT FAMILIES
 ========================================== */
 
-$font-heading: 'Poppins', sans-serif;
-$font-body: 'Inter', sans-serif;
+$font-primary: 'Inter', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+$font-heading: $font-secondary;
+$font-body: $font-primary;
 
 /* ==========================================
    FONT WEIGHTS
 ========================================== */
 
+$font-thin: 100;
+$font-extra-light: 200;
 $font-light: 300;
 $font-regular: 400;
 $font-medium: 500;
-$font-semibold: 600;
+$font-semi-bold: 600;
 $font-bold: 700;
-$font-extrabold: 800;
+$font-extra-bold: 800;
+$font-black: 900;
+
+/* ==========================================
+   FONT SIZES
+========================================== */
+
+$text-xs: 0.75rem;      // 12px
+$text-sm: 0.875rem;     // 14px
+$text-base: 1rem;       // 16px
+$text-lg: 1.125rem;     // 18px
+$text-xl: 1.25rem;      // 20px
+$text-2xl: 1.5rem;      // 24px
+$text-3xl: 1.875rem;    // 30px
+$text-4xl: 2.25rem;     // 36px
+$text-5xl: 3rem;        // 48px
+$text-6xl: 3.75rem;     // 60px
+
+/* ==========================================
+   HEADING SIZES
+========================================== */
+
+$h1-size: $text-6xl;
+$h2-size: $text-5xl;
+$h3-size: $text-4xl;
+$h4-size: $text-3xl;
+$h5-size: $text-2xl;
+$h6-size: $text-xl;
+
+/* ==========================================
+   FONT WEIGHTS
+========================================== */
+
+$h1-weight: $font-bold;
+$h2-weight: $font-bold;
+$h3-weight: $font-semi-bold;
+$h4-weight: $font-semi-bold;
+$h5-weight: $font-medium;
+$h6-weight: $font-medium;
 
 /* ==========================================
    LINE HEIGHTS
@@ -31,6 +70,7 @@ $leading-tight: 1.2;
 $leading-snug: 1.35;
 $leading-normal: 1.5;
 $leading-relaxed: 1.75;
+$leading-loose: 2;
 
 /* ==========================================
    LETTER SPACING
@@ -38,18 +78,39 @@ $leading-relaxed: 1.75;
 
 $tracking-tight: -0.02em;
 $tracking-normal: 0;
-$tracking-wide: 0.04em;
+$tracking-wide: 0.03em;
+$tracking-wider: 0.06em;
 
 /* ==========================================
-   FLUID FONT SIZES
+   SEMANTIC TYPOGRAPHY
 ========================================== */
 
-$text-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.875rem);
-$text-sm: clamp(0.875rem, 0.84rem + 0.2vw, 1rem);
-$text-base: clamp(1rem, 0.96rem + 0.25vw, 1.125rem);
-$text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.25rem);
-$text-xl: clamp(1.25rem, 1.15rem + 0.45vw, 1.5rem);
-$text-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
-$text-3xl: clamp(2rem, 1.7rem + 1vw, 2.5rem);
-$text-4xl: clamp(2.5rem, 2rem + 1.5vw, 3.5rem);
-$text-5xl: clamp(3rem, 2.5rem + 2vw, 4.5rem);
+$body-size: $text-base;
+$body-small-size: $text-sm;
+$caption-size: $text-xs;
+
+$paragraph-size: $body-size;
+$paragraph-line-height: $leading-relaxed;
+
+$button-font-size: $text-base;
+$button-font-weight: $font-medium;
+$button-line-height: $leading-normal;
+
+$label-font-size: $text-sm;
+$label-font-weight: $font-medium;
+
+$display-size: $text-6xl;
+$display-weight: $font-extra-bold;
+$display-line-height: $leading-tight;
+
+/* ==========================================
+   TEXT COLORS
+========================================== */
+
+$heading-color: $text-primary;
+$body-color: $text-secondary;
+$text-muted-color: $text-muted;
+$text-light-color: $text-light;
+
+$link-color: $primary-dark;
+$link-hover-color: $primary;

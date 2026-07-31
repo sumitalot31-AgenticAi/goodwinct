@@ -23,3 +23,27 @@
 @function strip-unit($number) {
   @return math.div($number, ($number * 0 + 1));
 }
+
+/* ==========================================
+   PERCENTAGE
+========================================== */
+
+@function percent($value, $total) {
+  @return math.percentage(math.div($value, $total));
+}
+
+/* ==========================================
+   LINE HEIGHT
+========================================== */
+
+@function line-height($font-size, $line-height) {
+  @return math.div($line-height, $font-size);
+}
+
+/* ==========================================
+   Z-INDEX SAFE
+========================================== */
+
+@function z($value) {
+  @return $value;
+}

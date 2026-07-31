@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: $space-6;
+}
+
+.nav-link {
+  position: relative;
+
+  color: $text-primary;
+
+  font-weight: $font-medium;
+
+  @include transition(color);
+
+  &:hover,
+  &.active {
+    color: $primary;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -.35rem;
+
+    width: 0;
+    height: 2px;
+
+    background: $primary;
+
+    @include transition(width);
+  }
+
+  &:hover::after,
+  &.active::after {
+    width: 100%;
+  }
+}

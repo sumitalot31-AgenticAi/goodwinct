@@ -1,0 +1,153 @@
+@use '../abstracts' as *;
+
+/* ==========================================
+   MODAL BACKDROP
+========================================== */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: $space-4;
+
+  background: rgba($black, .6);
+  backdrop-filter: blur(6px);
+
+  z-index: $z-modal-backdrop;
+
+  opacity: 0;
+  visibility: hidden;
+
+  @include transition(all);
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ==========================================
+   MODAL
+========================================== */
+
+.modal {
+  position: relative;
+
+  width: min(100%, 40rem);
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background: $surface;
+  border-radius: $radius-xl;
+
+  box-shadow: $shadow-lg;
+
+  overflow: hidden;
+
+  transform: translateY(30px) scale(.95);
+
+  @include transition(all);
+
+  .modal-backdrop.show & {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: $space-5 $space-6;
+
+  border-bottom: 1px solid $border-light;
+}
+
+.modal-title {
+  margin: 0;
+
+  font-size: $text-xl;
+  font-weight: $font-bold;
+  color: $text-primary;
+}
+
+/* ==========================================
+   CLOSE BUTTON
+========================================== */
+
+.modal-close {
+  width: 2.5rem;
+  height: 2.5rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: $radius-full;
+
+  color: $text-secondary;
+
+  @include transition(all);
+
+  &:hover {
+    background: $primary-light;
+    color: $primary;
+  }
+}
+
+/* ==========================================
+   BODY
+========================================== */
+
+.modal-body {
+  padding: $space-6;
+  overflow-y: auto;
+}
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: $space-3;
+
+  padding: $space-5 $space-6;
+
+  border-top: 1px solid $border-light;
+
+  @include mobile {
+    flex-direction: column;
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
+
+/* ==========================================
+   MODAL SIZES
+========================================== */
+
+.modal-sm {
+  width: min(100%, 24rem);
+}
+
+.modal-lg {
+  width: min(100%, 56rem);
+}
+
+.modal-xl {
+  width: min(100%, 72rem);
+}

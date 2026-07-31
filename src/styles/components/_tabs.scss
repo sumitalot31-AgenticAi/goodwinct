@@ -1,0 +1,119 @@
+@use '../abstracts' as *;
+
+/* ==========================================
+   TABS
+========================================== */
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-3;
+
+  border-bottom: 1px solid $border;
+}
+
+/* ==========================================
+   TAB BUTTON
+========================================== */
+
+.tab {
+  position: relative;
+
+  padding: $space-3 $space-5;
+
+  background: transparent;
+  color: $text-secondary;
+
+  border: none;
+  border-bottom: 3px solid transparent;
+
+  font-size: $text-base;
+  font-weight: $font-medium;
+
+  cursor: pointer;
+
+  @include transition(all);
+
+  &:hover {
+    color: $primary;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $primary;
+    outline-offset: 2px;
+  }
+}
+
+/* ==========================================
+   ACTIVE TAB
+========================================== */
+
+.tab.active {
+  color: $primary;
+  border-bottom-color: $primary;
+}
+
+/* ==========================================
+   TAB CONTENT
+========================================== */
+
+.tab-content {
+  padding: $space-6 0;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fade-in .35s ease;
+}
+
+/* ==========================================
+   VERTICAL TABS
+========================================== */
+
+.tabs-vertical {
+  display: flex;
+  gap: $space-8;
+
+  @include tablet-down {
+    flex-direction: column;
+  }
+
+  .tabs {
+    flex-direction: column;
+    border-bottom: 0;
+    border-right: 1px solid $border;
+
+    @include tablet-down {
+      border-right: 0;
+      border-bottom: 1px solid $border;
+    }
+  }
+
+  .tab {
+    text-align: left;
+    border-bottom: 0;
+    border-right: 3px solid transparent;
+
+    @include tablet-down {
+      border-right: 0;
+      border-bottom: 3px solid transparent;
+    }
+
+    &.active {
+      border-right-color: $primary;
+
+      @include tablet-down {
+        border-right-color: transparent;
+        border-bottom-color: $primary;
+      }
+    }
+  }
+
+  .tab-content {
+    flex: 1;
+  }
+}

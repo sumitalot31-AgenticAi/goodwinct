@@ -6,6 +6,7 @@
 
 ::-webkit-scrollbar {
   width: .75rem;
+  height: .75rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -13,17 +14,24 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $primary-500;
+  background: $primary;
   border-radius: $radius-full;
+  border: 2px solid $gray-100;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $primary-700;
+  background: $primary-hover;
 }
 
-/* Firefox */
+::-webkit-scrollbar-corner {
+  background: $gray-100;
+}
+
+/* ==========================================
+   FIREFOX
+========================================== */
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: $primary-500 $gray-100;
+  scrollbar-color: $primary $gray-100;
 }

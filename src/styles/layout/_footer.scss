@@ -1,0 +1,53 @@
+@use '../abstracts' as *;
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.site-footer {
+  color: $footer-text;
+
+  background: $footer-background;
+
+  padding-block: $space-16 $space-8;
+}
+
+.footer-top {
+  margin-bottom: $space-10;
+}
+
+.footer-bottom {
+  padding-top: $space-6;
+
+  border-top: 1px solid rgba($white, .1);
+
+  text-align: center;
+
+  color: rgba($white, .8);
+}
+
+.footer-title {
+  margin-bottom: $space-4;
+
+  color: $white;
+
+  font-size: $text-lg;
+
+  font-weight: $font-bold;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+
+  a {
+    color: rgba($white, .85);
+
+    @include transition(color);
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

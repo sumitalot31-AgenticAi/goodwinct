@@ -1,0 +1,48 @@
+@use '../abstracts' as *;
+
+/* ==========================================
+   GRID
+========================================== */
+
+.row {
+  display: grid;
+  gap: $space-6;
+}
+
+.grid-2 {
+  @include grid(2);
+
+  @include tablet-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-3 {
+  @include grid(3);
+
+  @include tablet-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-4 {
+  @include grid(4);
+
+  @include desktop {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @include tablet-down {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: $space-6;
+}
