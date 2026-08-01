@@ -5,140 +5,245 @@
 ========================================== */
 
 .btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: $space-2;
 
-  min-height: $button-height;
-  padding: $button-padding-y $button-padding-x;
+  display:inline-flex;
 
-  border: 2px solid transparent;
-  border-radius: $radius-lg;
+  align-items:center;
 
-  font-family: $font-body;
-  font-size: $button-font-size;
-  font-weight: $button-font-weight;
-  line-height: $button-line-height;
-  text-decoration: none;
+  justify-content:center;
 
-  cursor: pointer;
-  user-select: none;
+  gap:$space-2;
 
-  @include transition(all);
+
+  min-height:$button-height;
+
+  padding:$button-padding-y $button-padding-x;
+
+
+  border:2px solid transparent;
+
+  border-radius:$radius-lg;
+
+
+  font-family:$font-body;
+
+  font-size:$button-font-size;
+
+  font-weight:$button-font-weight;
+
+  line-height:$button-line-height;
+
+
+  text-decoration:none;
+
+
+  cursor:pointer;
+
+  user-select:none;
+
+
+  @include transition(
+    background,
+    color,
+    border-color,
+    transform
+  );
+
+
 
   &:disabled,
   &.disabled {
-    opacity: .6;
-    cursor: not-allowed;
-    pointer-events: none;
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+    pointer-events:none;
+
   }
 
+
+
   &:focus-visible {
-    outline: 2px solid $primary;
-    outline-offset: 2px;
+
+    outline:2px solid $primary;
+
+    outline-offset:2px;
+
   }
+
 }
+
+
 
 /* ==========================================
    PRIMARY
 ========================================== */
 
 .btn-primary {
-  background: $primary;
-  color: $button-primary-text;
-  border-color: $primary;
+
+  background:$primary;
+
+  color:$button-primary-text;
+
+  border-color:$primary;
+
+
 
   &:hover {
-    background: $primary-hover;
-    border-color: $primary-hover;
+
+    background:$primary-hover;
+
+    border-color:$primary-hover;
+
   }
+
 }
+
+
 
 /* ==========================================
    SECONDARY
 ========================================== */
 
 .btn-secondary {
-  background: transparent;
-  color: $primary;
-  border-color: $primary;
+
+  background:transparent;
+
+  color:$primary;
+
+  border-color:$primary;
+
+
 
   &:hover {
-    background: $primary;
-    color: $button-primary-text;
+
+    background:$primary;
+
+    color:$button-primary-text;
+
   }
+
 }
+
+
 
 /* ==========================================
    OUTLINE
 ========================================== */
 
 .btn-outline {
-  background: transparent;
-  color: $text-primary;
-  border-color: $border;
+
+  background:transparent;
+
+  color:$text-primary;
+
+  border-color:$border;
+
+
 
   &:hover {
-    border-color: $primary;
-    color: $primary;
+
+    border-color:$primary;
+
+    color:$primary;
+
   }
+
 }
+
+
 
 /* ==========================================
    GHOST
 ========================================== */
 
 .btn-ghost {
-  background: transparent;
-  color: $primary;
+
+  background:transparent;
+
+  color:$primary;
+
+
 
   &:hover {
-    background: $primary-light;
+
+    background:$primary-light;
+
   }
+
 }
+
+
 
 /* ==========================================
    BUTTON SIZES
 ========================================== */
 
 .btn-sm {
-  min-height: $button-height-sm;
-  padding: $space-2 $space-4;
-  font-size: $text-sm;
+
+  min-height:$button-height-sm;
+
+  padding:$space-2 $space-4;
+
+  font-size:$text-sm;
+
 }
 
+
+
 .btn-lg {
-  min-height: $button-height-lg;
-  padding: $space-4 $space-8;
-  font-size: $text-lg;
+
+  min-height:$button-height-lg;
+
+  padding:$space-4 $space-8;
+
+  font-size:$text-lg;
+
 }
+
+
 
 /* ==========================================
    FULL WIDTH
 ========================================== */
 
 .btn-block {
-  width: 100%;
+
+  width:100%;
+
 }
+
+
 
 /* ==========================================
    ICON BUTTON
 ========================================== */
 
 .btn-icon {
-  width: $button-height;
-  height: $button-height;
-  padding: 0;
-  border-radius: $radius-full;
+
+  width:$button-height;
+
+  height:$button-height;
+
+  padding:0;
+
+  border-radius:$radius-full;
+
 }
+
+
 
 /* ==========================================
    BUTTON GROUP
 ========================================== */
 
 .btn-group {
-  display: inline-flex;
-  gap: $space-3;
-  flex-wrap: wrap;
+
+  display:inline-flex;
+
+  gap:$space-3;
+
+  flex-wrap:wrap;
+
 }

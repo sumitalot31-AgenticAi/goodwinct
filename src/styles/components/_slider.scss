@@ -1,26 +1,78 @@
 @use '../abstracts' as *;
 
 /* ==========================================
-   SLIDER
+   SLIDER BASE
 ========================================== */
 
 .slider {
   position: relative;
+  width: 100%;
   overflow: hidden;
 }
 
 /* ==========================================
-   SLIDES
+   SLIDER TRACK
 ========================================== */
 
 .slider-track {
   display: flex;
+  width: 100%;
+  transition: transform .6s ease-in-out;
+  will-change: transform;
 }
+
+/* ==========================================
+   SLIDE
+========================================== */
 
 .slide {
   flex: 0 0 100%;
   position: relative;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
 }
+
+
+/* ==========================================
+   SLIDE OVERLAY
+   (For text readability on banners)
+========================================== */
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba($black, .65),
+      rgba($black, .15)
+    );
+
+  z-index: 1;
+}
+
+
+/* ==========================================
+   SLIDE CONTENT
+========================================== */
+
+.slide-content {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 2;
+}
+
 
 /* ==========================================
    NAVIGATION
@@ -33,114 +85,218 @@
   display: flex;
   justify-content: space-between;
 
-  padding-inline: $space-4;
+  padding-inline: $space-5;
 
   transform: translateY(-50%);
+
   pointer-events: none;
+
+  z-index: 5;
 }
 
+
 .slider-btn {
-  width: 3rem;
-  height: 3rem;
+  width: 3.25rem;
+  height: 3.25rem;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background: rgba($white, .9);
+  background: rgba($white, .92);
+
   color: $text-primary;
 
   border-radius: $radius-full;
 
-  box-shadow: $shadow-md;
+  box-shadow: $shadow-lg;
 
   cursor: pointer;
+
   pointer-events: auto;
 
   @include transition(all);
 
+
   &:hover {
     background: $primary;
+
     color: $button-primary-text;
-    transform: scale(1.05);
+
+    transform: scale(1.08);
   }
+
+
+  &:active {
+    transform: scale(.95);
+  }
+
 
   &:focus-visible {
     outline: 2px solid $primary;
-    outline-offset: 2px;
+    outline-offset: 3px;
   }
 }
 
+
+
 /* ==========================================
-   PAGINATION
+   PAGINATION DOTS
 ========================================== */
 
+
 .slider-pagination {
+
   position: absolute;
+
   left: 50%;
-  bottom: $space-5;
+  bottom: $space-6;
 
   display: flex;
+  align-items: center;
+
   gap: $space-2;
 
   transform: translateX(-50%);
+
+  z-index: 5;
 }
 
+
+
 .slider-dot {
-  width: .75rem;
-  height: .75rem;
+
+  width: .7rem;
+  height: .7rem;
 
   border-radius: $radius-full;
 
-  background: rgba($white, .5);
+  border: none;
 
-  cursor: pointer;
+  background: rgba($white,.55);
+
+  cursor:pointer;
 
   @include transition(all);
+
 
   &:hover {
-    background: $primary;
+    background:$primary;
   }
+
 
   &.active {
-    width: 2rem;
-    background: $primary;
+
+    width:2.2rem;
+
+    background:$primary;
+
   }
+
 }
+
+
 
 /* ==========================================
-   THUMBNAILS
+   THUMBNAIL NAVIGATION
 ========================================== */
 
-.slider-thumbs {
-  display: flex;
-  gap: $space-3;
-  margin-top: $space-5;
 
-  overflow-x: auto;
+.slider-thumbs {
+
+  display:flex;
+
+  gap:$space-3;
+
+  margin-top:$space-5;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+
+
+  &::-webkit-scrollbar {
+    display:none;
+  }
+
 }
 
+
+
 .slider-thumb {
-  flex: 0 0 5rem;
 
-  border: 2px solid transparent;
-  border-radius: $radius-md;
+  flex:0 0 5rem;
 
-  overflow: hidden;
+  height:4rem;
 
-  cursor: pointer;
+  border:2px solid transparent;
+
+  border-radius:$radius-md;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  opacity:.7;
 
   @include transition(all);
 
+
+
   img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
   }
+
+
 
   &:hover,
   &.active {
-    border-color: $primary;
+
+    opacity:1;
+
+    border-color:$primary;
+
   }
+
+}
+
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+
+@include respond-max(md) {
+
+
+  .slider-btn {
+
+    width:2.5rem;
+    height:2.5rem;
+
+  }
+
+
+
+  .slider-nav {
+
+    padding-inline:$space-3;
+
+  }
+
+
+
+  .slider-pagination {
+
+    bottom:$space-3;
+
+  }
+
+
 }

@@ -1,12 +1,12 @@
 @use '../abstracts' as *;
 
 /* ==========================================
-   SCROLLBAR
+   CUSTOM SCROLLBAR
 ========================================== */
 
 ::-webkit-scrollbar {
-  width: .75rem;
-  height: .75rem;
+  width: 0.75rem;
+  height: 0.75rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -14,13 +14,24 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $primary;
-  border-radius: $radius-full;
+  background: linear-gradient(
+    180deg,
+    $primary,
+    $primary-dark
+  );
+
   border: 2px solid $gray-100;
+  border-radius: $radius-full;
+
+  transition: background $transition-base;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: $primary-hover;
+  background: linear-gradient(
+    180deg,
+    $primary-hover,
+    $primary-800
+  );
 }
 
 ::-webkit-scrollbar-corner {
@@ -31,7 +42,7 @@
    FIREFOX
 ========================================== */
 
-* {
+html {
   scrollbar-width: thin;
   scrollbar-color: $primary $gray-100;
 }

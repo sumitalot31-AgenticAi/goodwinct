@@ -1,17 +1,32 @@
 /* ==========================================
-   BRAND PALETTE - LEMON GREEN
+   BRAND PALETTE - GOODWINCITY
 ========================================== */
 
-$primary-50: #fcffe9;
-$primary-100: #f7ffd4;
-$primary-200: #efffaa;
-$primary-300: #e4ff79;
-$primary-400: #d1ff43;
-$primary-500: #b5fe18; // Brand Color
-$primary-600: #9de500;
-$primary-700: #82bf00;
-$primary-800: #689900;
-$primary-900: #4f7400;
+$primary-50:  #f5faef;
+$primary-100: #eaf4de;
+$primary-200: #d4e9be;
+$primary-300: #b7d98d;
+$primary-400: #93bf56;
+$primary-500: #6BA32D; // Primary Brand
+$primary-600: #5d8f27;
+$primary-700: #4f7b21;
+$primary-800: #41671b;
+$primary-900: #345315;
+
+/* ==========================================
+   ACCENT PALETTE
+========================================== */
+
+$accent-50:  #fcffe9;
+$accent-100: #f7ffd4;
+$accent-200: #efffaa;
+$accent-300: #e4ff79;
+$accent-400: #d1ff43;
+$accent-500: #b5fe18; // CTA / Highlight
+$accent-600: #9de500;
+$accent-700: #82bf00;
+$accent-800: #689900;
+$accent-900: #4f7400;
 
 /* ==========================================
    BRAND SHORTCUTS
@@ -22,6 +37,11 @@ $primary-light: $primary-100;
 $primary-dark: $primary-700;
 $primary-hover: $primary-600;
 
+$accent: $accent-500;
+$accent-light: $accent-100;
+$accent-dark: $accent-700;
+$accent-hover: $accent-600;
+
 /* ==========================================
    NEUTRAL PALETTE
 ========================================== */
@@ -29,7 +49,7 @@ $primary-hover: $primary-600;
 $white: #ffffff;
 $black: #000000;
 
-$gray-50: #f9fafb;
+$gray-50:  #f9fafb;
 $gray-100: #f3f4f6;
 $gray-200: #e5e7eb;
 $gray-300: #d1d5db;
@@ -46,48 +66,50 @@ $gray-900: #111827;
 
 $success: #22c55e;
 $warning: #f59e0b;
-$error: #ef4444;
-$info: #3b82f6;
+$error:   #ef4444;
+$info:    #3b82f6;
 
 /* ==========================================
    SURFACES
 ========================================== */
 
-$background: #fcfdf8;
-$surface: #ffffff;
-$surface-secondary: #f6f9ef;
+$background:         #fafcf8;
+$surface:            $white;
+$surface-secondary:  $primary-50;
+$surface-tertiary:   $gray-50;
 
 /* ==========================================
    TEXT
 ========================================== */
 
-$text-primary: $gray-900;
+$text-primary:   $gray-900;
 $text-secondary: $gray-600;
-$text-muted: $gray-500;
-$text-light: $white;
+$text-muted:     $gray-500;
+$text-light:     $white;
 
 /* ==========================================
    BORDERS
 ========================================== */
 
-$border-light: #eef2e5;
-$border: #dde5cf;
-$border-dark: #c6d2b0;
+$border-light: #edf2e7;
+$border:       #d9e5cf;
+$border-dark:  #bcccae;
 
 /* ==========================================
    OVERLAYS
 ========================================== */
 
-$overlay-dark: rgba(17, 24, 39, 0.72);
-$overlay-light: rgba(255, 255, 255, 0.72);
+$overlay-dark:  rgba(17, 24, 39, 0.72);
+$overlay-medium: rgba(17, 24, 39, 0.55);
+$overlay-light: rgba(255, 255, 255, 0.75);
 
 /* ==========================================
-   SHADOWS
+   SHADOW COLORS
 ========================================== */
 
 $shadow-color-sm: rgba(0, 0, 0, 0.05);
-$shadow-color: rgba(0, 0, 0, 0.10);
-$shadow-color-lg: rgba(0, 0, 0, 0.16);
+$shadow-color:    rgba(0, 0, 0, 0.10);
+$shadow-color-lg: rgba(0, 0, 0, 0.18);
 
 /* ==========================================
    GRADIENTS
@@ -96,29 +118,45 @@ $shadow-color-lg: rgba(0, 0, 0, 0.16);
 $gradient-primary: linear-gradient(
   135deg,
   $primary-700 0%,
-  $primary-500 50%,
-  $primary-300 100%
+  $primary-500 100%
+);
+
+$gradient-accent: linear-gradient(
+  135deg,
+  $accent-500 0%,
+  $accent-300 100%
 );
 
 $gradient-light: linear-gradient(
   135deg,
   $primary-50 0%,
-  $primary-100 100%
+  $white 100%
 );
+
+$gradient-dark: linear-gradient(
+  135deg,
+  $primary-900 0%,
+  $primary-700 100%
+);
+
 /* ==========================================
-   COMMON COLORS
+   COMMON TOKENS
 ========================================== */
 
-$link-color: $primary-dark;
-$link-hover: $primary;
+$link-color: $primary;
+$link-hover: $primary-dark;
 
 $button-primary-bg: $primary;
 $button-primary-hover: $primary-hover;
-$button-primary-text: $black;
+$button-primary-text: $white;
+
+$button-accent-bg: $accent;
+$button-accent-hover: $accent-hover;
+$button-accent-text: $primary-900;
 
 $card-background: $surface;
 $section-background: $background;
 
-$header-background: $primary-700;
-$footer-background: $primary-800;
+$header-background: $primary-800;
+$footer-background: $primary-900;
 $footer-text: $white;

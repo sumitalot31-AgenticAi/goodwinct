@@ -5,43 +5,78 @@
 ========================================== */
 
 .nav {
-  display: flex;
-  align-items: center;
-  gap: $space-6;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:$space-6;
+
 }
 
+
+
+/* ==========================================
+   NAV LINK
+========================================== */
+
 .nav-link {
-  position: relative;
 
-  color: $text-primary;
+  position:relative;
 
-  font-weight: $font-medium;
+
+  color:$text-primary;
+
+
+  font-weight:$font-medium;
+
+  text-decoration:none;
+
 
   @include transition(color);
 
+
+
   &:hover,
   &.active {
-    color: $primary;
+
+    color:$primary;
+
   }
+
+
 
   &::after {
-    content: "";
 
-    position: absolute;
+    content:"";
 
-    left: 0;
-    bottom: -.35rem;
 
-    width: 0;
-    height: 2px;
+    position:absolute;
 
-    background: $primary;
+    left:0;
+
+    bottom:-.35rem;
+
+
+    width:0;
+
+    height:2px;
+
+
+    background:$primary;
+
 
     @include transition(width);
+
   }
+
+
 
   &:hover::after,
   &.active::after {
-    width: 100%;
+
+    width:100%;
+
   }
+
 }

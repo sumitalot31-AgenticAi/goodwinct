@@ -7,10 +7,11 @@
 ========================================== */
 
 $container-max-width: 1320px;
-$container-padding: 1rem;
+$container-padding: $space-4;
 
 $header-height: 5rem;
-$footer-padding: 5rem;
+$topbar-height: 2.5rem;
+$footer-padding: $space-20;
 
 /* ==========================================
    CONTAINERS
@@ -23,16 +24,39 @@ $container-xl: 1140px;
 $container-xxl: 1320px;
 
 /* ==========================================
+   SECTION SPACING
+========================================== */
+
+$section-padding-y: $space-24;
+$section-padding-y-mobile: $space-16;
+
+$section-gap: $space-12;
+
+/* ==========================================
+   GRID
+========================================== */
+
+$grid-gap: $space-6;
+$grid-gap-lg: $space-8;
+
+/* ==========================================
    BORDER RADIUS
 ========================================== */
 
-$radius-xs: 0.25rem;
-$radius-sm: 0.5rem;
-$radius-md: 0.75rem;
+$radius-xs: .25rem;
+$radius-sm: .5rem;
+$radius-md: .75rem;
 $radius-lg: 1rem;
 $radius-xl: 1.5rem;
 $radius-2xl: 2rem;
 $radius-full: 9999px;
+
+/* ==========================================
+   BORDER
+========================================== */
+
+$border-width: 1px;
+$border-width-lg: 2px;
 
 /* ==========================================
    SHADOWS
@@ -46,53 +70,9 @@ $shadow-lg: 0 16px 40px $shadow-color-lg;
    TRANSITIONS
 ========================================== */
 
-$transition-fast: 0.2s ease;
-$transition-base: 0.3s ease;
-$transition-slow: 0.5s ease;
-
-/* ==========================================
-   Z-INDEX
-========================================== */
-
-$z-dropdown: 1000;
-$z-sticky: 1020;
-$z-fixed: 1030;
-$z-modal-backdrop: 1040;
-$z-modal: 1050;
-$z-popover: 1060;
-$z-tooltip: 1070;
-$z-toast: 1080;
-
-/* ==========================================
-   COMMON SIZES
-========================================== */
-
-$button-height-sm: 2.5rem;
-$button-height: 3rem;
-$button-height-lg: 3.5rem;
-
-$input-height: 3.25rem;
-
-$icon-xs: 0.875rem;
-$icon-sm: 1rem;
-$icon-md: 1.25rem;
-$icon-lg: 1.5rem;
-$icon-xl: 2rem;
-
-/* ==========================================
-   SECTION SPACING
-========================================== */
-
-$section-padding-y: 6rem;
-$section-padding-y-mobile: 4rem;
-
-$section-gap: 2rem;
-
-/* ==========================================
-   GRID
-========================================== */
-
-$grid-gap: 1.5rem;
+$transition-fast: .2s ease;
+$transition-base: .3s ease;
+$transition-slow: .5s ease;
 
 /* ==========================================
    ANIMATION
@@ -103,21 +83,86 @@ $animation-normal: 300ms;
 $animation-slow: 500ms;
 
 /* ==========================================
+   OPACITY
+========================================== */
+
+$opacity-disabled: .5;
+$opacity-overlay: .75;
+
+/* ==========================================
+   Z INDEX
+========================================== */
+
+$z-base: 1;
+$z-overlay: 10;
+$z-header: 100;
+$z-floating: 900;
+$z-dropdown: 1000;
+$z-sticky: 1020;
+$z-fixed: 1030;
+$z-modal-backdrop: 1040;
+$z-modal: 1050;
+$z-popover: 1060;
+$z-tooltip: 1070;
+$z-toast: 1080;
+
+/* ==========================================
    BUTTONS
 ========================================== */
 
 $button-height-sm: 2.5rem;
+$button-height: 3rem;
 $button-height-lg: 3.5rem;
 
 $button-padding-x: $space-6;
 $button-padding-y: $space-3;
 
-$button-font-size: $text-base;
-$button-font-weight: $font-medium;
-$button-line-height: $leading-normal;
+/* ==========================================
+   FORMS
+========================================== */
+
+$input-height: 3.25rem;
+
+$field-padding-x: $space-4;
+$field-padding-y: $space-3;
+
+$field-radius: $radius-md;
+
+/* ==========================================
+   ICONS
+========================================== */
+
+$icon-xs: .875rem;
+$icon-sm: 1rem;
+$icon-md: 1.25rem;
+$icon-lg: 1.5rem;
+$icon-xl: 2rem;
 
 /* ==========================================
    CARDS
 ========================================== */
 
 $card-padding: $space-6;
+$card-gap: $space-6;
+$card-radius: $radius-xl;
+
+/* ==========================================
+   IMAGES
+========================================== */
+
+$image-radius: $radius-xl;
+$image-shadow: $shadow-lg;
+
+/* ==========================================
+   HERO
+========================================== */
+
+$hero-min-height: 80vh;
+$hero-min-height-mobile: 65vh;
+
+/* ==========================================
+   NAVIGATION
+========================================== */
+
+$navbar-height: $header-height;
+$navbar-blur: 20px;

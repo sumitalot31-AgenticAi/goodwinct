@@ -1,5 +1,9 @@
 @use 'sass:map';
+
 @use './breakpoints' as *;
+@use './colors' as *;
+@use './spacing' as *;
+@use './typography' as *;
 @use './variables' as *;
 
 /* ==========================================
@@ -13,14 +17,14 @@
 }
 
 @mixin respond-down($breakpoint) {
-  @media (max-width: calc(map.get($breakpoints, $breakpoint) - 0.02px)) {
+  @media (max-width: calc(map.get($breakpoints, $breakpoint) - .02px)) {
     @content;
   }
 }
 
 @mixin respond-between($min, $max) {
-  @media (min-width: map.get($breakpoints, $min)) and
-         (max-width: calc(map.get($breakpoints, $max) - 0.02px)) {
+  @media (min-width: map.get($breakpoints, $min))
+    and (max-width: calc(map.get($breakpoints, $max) - .02px)) {
     @content;
   }
 }
@@ -151,8 +155,8 @@
 
 @mixin truncate {
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* ==========================================
@@ -172,4 +176,178 @@
 
 @mixin transition($property: all) {
   transition: $property $transition-base;
+}
+
+/* ==========================================
+   HOVER LIFT
+========================================== */
+
+@mixin hover-lift($distance: -8px) {
+  @include transition;
+
+  &:hover {
+    transform: translateY($distance);
+    box-shadow: $shadow-lg;
+  }
+}
+
+/* ==========================================
+   GLASS
+========================================== */
+
+@mixin glass(
+  $bg: rgba(255,255,255,.12),
+  $blur:16px
+){
+  background:$bg;
+  backdrop-filter:blur($blur);
+  -webkit-backdrop-filter:blur($blur);
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+@mixin overlay($color:$overlay-dark){
+  position:absolute;
+  inset:0;
+  background:$color;
+}
+
+/* ==========================================
+   HERO OVERLAY
+========================================== */
+
+@mixin hero-overlay{
+  background:linear-gradient(
+    90deg,
+    rgba(0,0,0,.75) 0%,
+    rgba(0,0,0,.45) 55%,
+    rgba(0,0,0,.15) 100%
+  );
+}
+
+/* ==========================================
+   SECTION HEADING
+========================================== */
+
+@mixin section-heading{
+
+  .section-tag{
+
+    display:inline-block;
+
+    margin-bottom:$space-4;
+
+    color:$primary;
+
+    font-size:$text-sm;
+
+    font-weight:$font-bold;
+
+    letter-spacing:.12rem;
+
+    text-transform:uppercase;
+  }
+
+  h2{
+
+    margin-bottom:$space-6;
+
+    color:$text-primary;
+
+    line-height:1.2;
+
+    font-weight:$font-extra-bold;
+  }
+
+  p{
+
+    color:$text-secondary;
+
+    line-height:1.8;
+  }
+}
+
+/* ==========================================
+   PRIMARY BUTTON
+========================================== */
+
+@mixin primary-button{
+
+  @include flex-center;
+
+  padding:$space-4 $space-8;
+
+  background:$button-primary-bg;
+
+  color:$button-primary-text;
+
+  border-radius:$radius-full;
+
+  text-decoration:none;
+
+  font-weight:$font-semi-bold;
+
+  @include transition;
+
+  &:hover{
+
+    background:$button-primary-hover;
+
+    transform:translateY(-3px);
+  }
+}
+
+/* ==========================================
+   IMAGE HOVER
+========================================== */
+
+@mixin image-hover($scale:1.08){
+
+  overflow:hidden;
+
+  img{
+
+    transition:transform .5s ease;
+  }
+
+  &:hover img{
+
+    transform:scale($scale);
+  }
+}
+
+/* ==========================================
+   LINE CLAMP
+========================================== */
+
+@mixin line-clamp($lines){
+
+  display:-webkit-box;
+
+  -webkit-box-orient:vertical;
+
+  -webkit-line-clamp:$lines;
+
+  overflow:hidden;
+}
+
+/* ==========================================
+   ANIMATIONS
+========================================== */
+
+@mixin fade-up($duration:.7s){
+
+  animation:fadeUp $duration ease forwards;
+}
+
+@mixin fade-in($duration:.7s){
+
+  animation:fadeIn $duration ease forwards;
+}
+
+@mixin zoom-in($duration:.7s){
+
+  animation:zoomIn $duration ease forwards;
 }

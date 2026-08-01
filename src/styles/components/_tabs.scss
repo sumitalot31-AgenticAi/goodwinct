@@ -12,6 +12,7 @@
   border-bottom: 1px solid $border;
 }
 
+
 /* ==========================================
    TAB BUTTON
 ========================================== */
@@ -22,6 +23,7 @@
   padding: $space-3 $space-5;
 
   background: transparent;
+
   color: $text-secondary;
 
   border: none;
@@ -32,26 +34,26 @@
 
   cursor: pointer;
 
-  @include transition(all);
+  @include transition(color, border-color);
+
 
   &:hover {
     color: $primary;
   }
 
+
   &:focus-visible {
     outline: 2px solid $primary;
     outline-offset: 2px;
   }
+
+
+  &.active {
+    color: $primary;
+    border-bottom-color: $primary;
+  }
 }
 
-/* ==========================================
-   ACTIVE TAB
-========================================== */
-
-.tab.active {
-  color: $primary;
-  border-bottom-color: $primary;
-}
 
 /* ==========================================
    TAB CONTENT
@@ -61,59 +63,102 @@
   padding: $space-6 0;
 }
 
+
 .tab-pane {
-  display: none;
+
+  display:none;
+
+
+  &.active {
+    display:block;
+    animation:fade-in .35s ease;
+  }
+
 }
 
-.tab-pane.active {
-  display: block;
-  animation: fade-in .35s ease;
-}
+
 
 /* ==========================================
    VERTICAL TABS
 ========================================== */
 
 .tabs-vertical {
-  display: flex;
-  gap: $space-8;
+
+  display:flex;
+
+  gap:$space-8;
+
 
   @include tablet-down {
-    flex-direction: column;
+    flex-direction:column;
   }
+
+
 
   .tabs {
-    flex-direction: column;
-    border-bottom: 0;
-    border-right: 1px solid $border;
+
+    flex-direction:column;
+
+    border-bottom:0;
+
+    border-right:1px solid $border;
+
+
 
     @include tablet-down {
-      border-right: 0;
-      border-bottom: 1px solid $border;
+
+      border-right:0;
+
+      border-bottom:1px solid $border;
+
     }
+
   }
+
+
 
   .tab {
-    text-align: left;
-    border-bottom: 0;
-    border-right: 3px solid transparent;
+
+    text-align:left;
+
+    border-bottom:0;
+
+    border-right:3px solid transparent;
+
+
 
     @include tablet-down {
-      border-right: 0;
-      border-bottom: 3px solid transparent;
+
+      border-right:0;
+
+      border-bottom:3px solid transparent;
+
     }
+
+
 
     &.active {
-      border-right-color: $primary;
+
+      border-right-color:$primary;
+
+
 
       @include tablet-down {
-        border-right-color: transparent;
-        border-bottom-color: $primary;
+
+        border-right-color:transparent;
+
+        border-bottom-color:$primary;
+
       }
+
     }
+
   }
 
+
+
   .tab-content {
-    flex: 1;
+    flex:1;
   }
+
 }

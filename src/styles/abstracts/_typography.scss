@@ -7,8 +7,8 @@
 $font-primary: 'Inter', sans-serif;
 $font-secondary: 'Poppins', sans-serif;
 
-$font-heading: $font-secondary;
 $font-body: $font-primary;
+$font-heading: $font-secondary;
 
 /* ==========================================
    FONT WEIGHTS
@@ -38,6 +38,7 @@ $text-3xl: 1.875rem;    // 30px
 $text-4xl: 2.25rem;     // 36px
 $text-5xl: 3rem;        // 48px
 $text-6xl: 3.75rem;     // 60px
+$text-7xl: 4.5rem;      // 72px
 
 /* ==========================================
    HEADING SIZES
@@ -51,15 +52,15 @@ $h5-size: $text-2xl;
 $h6-size: $text-xl;
 
 /* ==========================================
-   FONT WEIGHTS
+   HEADING WEIGHTS
 ========================================== */
 
-$h1-weight: $font-bold;
-$h2-weight: $font-bold;
-$h3-weight: $font-semi-bold;
-$h4-weight: $font-semi-bold;
-$h5-weight: $font-medium;
-$h6-weight: $font-medium;
+$h1-weight: $font-extra-bold;
+$h2-weight: $font-extra-bold;
+$h3-weight: $font-bold;
+$h4-weight: $font-bold;
+$h5-weight: $font-semi-bold;
+$h6-weight: $font-semi-bold;
 
 /* ==========================================
    LINE HEIGHTS
@@ -85,21 +86,54 @@ $tracking-wider: 0.06em;
    SEMANTIC TYPOGRAPHY
 ========================================== */
 
+/* Hero */
+$hero-title-size: clamp(3rem, 6vw, 4.5rem);
+$hero-title-weight: $font-extra-bold;
+$hero-title-line-height: $leading-tight;
+
+/* Section */
+$section-title-size: clamp(2.25rem, 4vw, 3.25rem);
+$section-title-weight: $font-extra-bold;
+$section-title-line-height: $leading-tight;
+
+/* Cards */
+$card-title-size: $text-xl;
+$card-title-weight: $font-bold;
+
+/* Body */
 $body-size: $text-base;
 $body-small-size: $text-sm;
-$caption-size: $text-xs;
+$body-line-height: $leading-relaxed;
 
+/* Caption */
+$caption-size: $text-xs;
+$caption-weight: $font-regular;
+$caption-line-height: $leading-normal;
+
+/* Paragraph */
 $paragraph-size: $body-size;
 $paragraph-line-height: $leading-relaxed;
 
+/* Subtitle */
+$subtitle-size: $text-lg;
+$subtitle-weight: $font-medium;
+
+/* Button */
 $button-font-size: $text-base;
-$button-font-weight: $font-medium;
+$button-font-weight: $font-semi-bold;
 $button-line-height: $leading-normal;
 
+/* Label */
 $label-font-size: $text-sm;
 $label-font-weight: $font-medium;
 
-$display-size: $text-6xl;
+/* Overline */
+$overline-size: $text-xs;
+$overline-weight: $font-bold;
+$overline-spacing: $tracking-wider;
+
+/* Display */
+$display-size: $text-7xl;
 $display-weight: $font-extra-bold;
 $display-line-height: $leading-tight;
 
@@ -111,6 +145,10 @@ $heading-color: $text-primary;
 $body-color: $text-secondary;
 $text-muted-color: $text-muted;
 $text-light-color: $text-light;
+
+/* ==========================================
+   LINKS
+========================================== */
 
 $link-color: $primary-dark;
 $link-hover-color: $primary;

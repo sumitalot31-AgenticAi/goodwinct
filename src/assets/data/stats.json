@@ -3,22 +3,22 @@
   "subtitle": "Numbers That Speak",
   "items": [
     {
-      "value": 10,
+      "value": 20,
       "suffix": "+",
       "label": "Years of Experience"
     },
     {
-      "value": 500,
+      "value": 15000,
       "suffix": "+",
       "label": "Happy Families"
     },
     {
-      "value": 15,
+      "value": 20,
       "suffix": "+",
       "label": "Projects Delivered"
     },
     {
-      "value": 250,
+      "value": 10000,
       "suffix": "+",
       "label": "Acres Developed"
     }

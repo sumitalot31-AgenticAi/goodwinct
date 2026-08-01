@@ -5,44 +5,88 @@
 ========================================== */
 
 .row {
-  display: grid;
-  gap: $space-6;
+
+  display:grid;
+
+  gap:$space-6;
+
 }
+
+
+/* ==========================================
+   TWO COLUMN GRID
+========================================== */
 
 .grid-2 {
+
   @include grid(2);
 
+
   @include tablet-down {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:1fr;
+
   }
+
 }
+
+
+
+/* ==========================================
+   THREE COLUMN GRID
+========================================== */
 
 .grid-3 {
+
   @include grid(3);
 
+
   @include tablet-down {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:1fr;
+
   }
+
 }
+
+
+
+/* ==========================================
+   FOUR COLUMN GRID
+========================================== */
 
 .grid-4 {
+
   @include grid(4);
 
-  @include desktop {
-    grid-template-columns: repeat(4, 1fr);
-  }
 
   @include tablet-down {
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:repeat(2,1fr);
+
   }
+
 
   @include mobile {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:1fr;
+
   }
+
 }
 
+
+
+/* ==========================================
+   AUTO GRID
+========================================== */
+
 .grid-auto {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: $space-6;
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+  gap:$space-6;
+
 }

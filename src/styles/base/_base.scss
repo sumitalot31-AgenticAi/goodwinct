@@ -1,142 +1,197 @@
-@use '../abstracts' as *;
+    @use '../abstracts' as *;
 
-/* ==========================================
-   ROOT
-========================================== */
+    /* ==========================================
+      ROOT
+    ========================================== */
 
-html {
-  font-size: 100%;
-}
+    html {
+      font-size: 100%;
+      scroll-behavior: smooth;
+    }
 
-body {
-  font-family: $font-body;
-  font-size: $text-base;
-  font-weight: $font-regular;
-  line-height: $leading-normal;
+    body {
+      font-family: $font-body;
+      font-size: $body-size;
+      font-weight: $font-regular;
+      line-height: $paragraph-line-height;
 
-  color: $text-primary;
-  background-color: $background;
+      color: $text-primary;
+      background: $background;
 
-  overflow-x: hidden;
-}
+      overflow-x: hidden;
 
-/* ==========================================
-   HEADINGS
-========================================== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $font-heading;
-  font-weight: $font-bold;
-  line-height: $leading-tight;
-  color: $text-primary;
-}
+      text-rendering: optimizeLegibility;
+    }
 
-h1 {
-  font-size: $h1-size;
-  font-weight: $h1-weight;
-}
+    /* ==========================================
+      HEADINGS
+    ========================================== */
 
-h2 {
-  font-size: $h2-size;
-  font-weight: $h2-weight;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin: 0 0 $space-4;
 
-h3 {
-  font-size: $h3-size;
-  font-weight: $h3-weight;
-}
+      font-family: $font-heading;
+      font-weight: $font-bold;
+      line-height: $leading-tight;
 
-h4 {
-  font-size: $h4-size;
-  font-weight: $h4-weight;
-}
+      color: $heading-color;
+    }
 
-h5 {
-  font-size: $h5-size;
-  font-weight: $h5-weight;
-}
+    h1 {
+      font-size: clamp(2.8rem, 6vw, $h1-size);
+    }
 
-h6 {
-  font-size: $h6-size;
-  font-weight: $h6-weight;
-}
+    h2 {
+      font-size: clamp(2.2rem, 5vw, $h2-size);
+    }
 
-/* ==========================================
-   TEXT
-========================================== */
+    h3 {
+      font-size: clamp(1.8rem, 4vw, $h3-size);
+    }
 
-p {
-  color: $text-secondary;
-  line-height: $paragraph-line-height;
-  margin-bottom: $space-4;
-}
+    h4 {
+      font-size: $h4-size;
+    }
 
-small {
-  font-size: $text-sm;
-}
+    h5 {
+      font-size: $h5-size;
+    }
 
-strong {
-  font-weight: $font-bold;
-}
+    h6 {
+      font-size: $h6-size;
+    }
 
-/* ==========================================
-   LINKS
-========================================== */
+    /* ==========================================
+      TEXT
+    ========================================== */
 
-a {
-  @include transition(color);
+    p {
+      margin-bottom: $space-4;
 
-  &:hover {
-    color: $primary-600;
-  }
-}
+      color: $body-color;
 
-/* ==========================================
-   IMAGES
-========================================== */
+      font-size: $paragraph-size;
+      line-height: $paragraph-line-height;
+    }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
+    small {
+      font-size: $caption-size;
+    }
 
-/* ==========================================
-   SECTIONS
-========================================== */
+    strong {
+      font-weight: $font-bold;
+    }
 
-section {
-  @include section;
-}
+    /* ==========================================
+      LINKS
+    ========================================== */
 
-/* ==========================================
-   CONTAINER
-========================================== */
+    a {
+      color: inherit;
+      text-decoration: none;
 
-.container {
-  @include container;
-}
+      @include transition(color);
 
-/* ==========================================
-   SELECTION
-========================================== */
+      &:hover {
+        color: $primary-700;
+      }
+    }
 
-::selection {
-  background: $primary-500;
-  color: $white;
-}
+    /* ==========================================
+      LISTS
+    ========================================== */
 
-main {
-  display: block;
-}
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
 
-hr {
-  border: 0;
-  border-top: 1px solid $border;
-  margin: $space-8 0;
-}
+    /* ==========================================
+      IMAGES
+    ========================================== */
+
+    img,
+    picture {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ==========================================
+      MEDIA
+    ========================================== */
+
+    video,
+    iframe {
+      display: block;
+      max-width: 100%;
+    }
+
+    /* ==========================================
+      FORMS
+    ========================================== */
+
+    input,
+    textarea,
+    select,
+    button {
+      font: inherit;
+    }
+
+    /* ==========================================
+      SECTIONS
+    ========================================== */
+
+    section {
+      @include section;
+    }
+
+    /* ==========================================
+      CONTAINER
+    ========================================== */
+
+    .container {
+      @include container;
+    }
+
+    /* ==========================================
+      HIDDEN
+    ========================================== */
+
+    [hidden] {
+      display: none !important;
+    }
+
+    /* ==========================================
+      SELECTION
+    ========================================== */
+
+    ::selection {
+      background: $primary-500;
+      color: $primary-900;
+    }
+
+    /* ==========================================
+      MISC
+    ========================================== */
+
+    main {
+      display: block;
+    }
+
+    hr {
+      margin: $space-8 0;
+
+      border: 0;
+      border-top: 1px solid $border;
+    }

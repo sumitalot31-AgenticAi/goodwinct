@@ -4,189 +4,100 @@
    DISPLAY
 ========================================== */
 
-.d-none {
-  display: none !important;
-}
-
-.d-block {
-  display: block !important;
-}
-
-.d-flex {
-  display: flex !important;
-}
-
-.d-grid {
-  display: grid !important;
-}
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
 
 /* ==========================================
    FLEX
 ========================================== */
 
-.justify-center {
-  justify-content: center !important;
-}
+.flex-column { flex-direction: column !important; }
+.flex-wrap { flex-wrap: wrap !important; }
 
-.justify-between {
-  justify-content: space-between !important;
-}
+.justify-start { justify-content: flex-start !important; }
+.justify-center { justify-content: center !important; }
+.justify-end { justify-content: flex-end !important; }
+.justify-between { justify-content: space-between !important; }
 
-.align-center {
-  align-items: center !important;
-}
-
-.flex-column {
-  flex-direction: column !important;
-}
+.align-start { align-items: flex-start !important; }
+.align-center { align-items: center !important; }
+.align-end { align-items: flex-end !important; }
 
 /* ==========================================
    TEXT
 ========================================== */
 
-.text-center {
-  text-align: center !important;
-}
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
 
-.text-left {
-  text-align: left !important;
-}
-
-.text-right {
-  text-align: right !important;
-}
-
-.text-primary {
-  color: $primary !important;
-}
-
-.text-secondary {
-  color: $text-secondary !important;
-}
-
-.text-muted {
-  color: $text-muted !important;
-}
-
-.text-dark {
-  color: $text-primary !important;
-}
-
-.text-white {
-  color: $white !important;
-}
+.text-primary { color: $primary !important; }
+.text-secondary { color: $text-secondary !important; }
+.text-muted { color: $text-muted !important; }
+.text-white { color: $white !important; }
 
 /* ==========================================
-   BACKGROUNDS
+   BACKGROUND
 ========================================== */
 
-.bg-primary {
-  background-color: $primary !important;
-}
-
-.bg-white {
-  background-color: $white !important;
-}
-
-.bg-light {
-  background-color: $background !important;
-}
-
-.bg-surface {
-  background-color: $surface !important;
-}
-
-.bg-secondary {
-  background-color: $surface-secondary !important;
-}
+.bg-primary { background: $primary !important; }
+.bg-white { background: $white !important; }
+.bg-light { background: $background !important; }
+.bg-surface { background: $surface !important; }
+.bg-gradient { background: $gradient-primary !important; }
 
 /* ==========================================
-   WIDTH
+   WIDTH / HEIGHT
 ========================================== */
 
-.w-100 {
-  width: 100% !important;
-}
+.w-100 { width: 100% !important; }
+.h-100 { height: 100% !important; }
 
 /* ==========================================
-   SPACING
+   MARGIN
 ========================================== */
 
-.mt-auto {
-  margin-top: auto !important;
-}
-
-.mx-auto {
-  margin-inline: auto !important;
-}
-
-.my-auto {
-  margin-block: auto !important;
-}
+.m-auto { margin: auto !important; }
+.mx-auto { margin-inline: auto !important; }
+.my-auto { margin-block: auto !important; }
+.mt-auto { margin-top: auto !important; }
 
 /* ==========================================
    BORDER RADIUS
 ========================================== */
 
-.rounded-sm {
-  border-radius: $radius-sm !important;
-}
-
-.rounded-md {
-  border-radius: $radius-md !important;
-}
-
-.rounded-lg {
-  border-radius: $radius-lg !important;
-}
-
-.rounded-xl {
-  border-radius: $radius-xl !important;
-}
-
-.rounded-full {
-  border-radius: $radius-full !important;
-}
+.rounded-sm { border-radius: $radius-sm !important; }
+.rounded-md { border-radius: $radius-md !important; }
+.rounded-lg { border-radius: $radius-lg !important; }
+.rounded-xl { border-radius: $radius-xl !important; }
+.rounded-full { border-radius: $radius-full !important; }
 
 /* ==========================================
    SHADOWS
 ========================================== */
 
-.shadow-sm {
-  box-shadow: $shadow-sm !important;
-}
-
-.shadow-md {
-  box-shadow: $shadow-md !important;
-}
-
-.shadow-lg {
-  box-shadow: $shadow-lg !important;
-}
+.shadow-sm { box-shadow: $shadow-sm !important; }
+.shadow-md { box-shadow: $shadow-md !important; }
+.shadow-lg { box-shadow: $shadow-lg !important; }
 
 /* ==========================================
-   CURSORS
+   POSITION
 ========================================== */
 
-.cursor-pointer {
-  cursor: pointer !important;
-}
-
-.cursor-default {
-  cursor: default !important;
-}
+.position-relative { position: relative !important; }
+.position-absolute { position: absolute !important; }
+.position-fixed { position: fixed !important; }
 
 /* ==========================================
    OVERFLOW
 ========================================== */
 
-.overflow-hidden {
-  overflow: hidden !important;
-}
-
-.overflow-auto {
-  overflow: auto !important;
-}
+.overflow-hidden { overflow: hidden !important; }
+.overflow-auto { overflow: auto !important; }
 
 /* ==========================================
    IMAGE
@@ -202,10 +113,32 @@
    VISIBILITY
 ========================================== */
 
-.invisible {
-  visibility: hidden !important;
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; }
+
+/* ==========================================
+   CURSOR
+========================================== */
+
+.cursor-pointer { cursor: pointer !important; }
+.cursor-default { cursor: default !important; }
+
+/* ==========================================
+   ANIMATION
+========================================== */
+
+.animate-fade-up {
+  animation: fade-up .8s ease both;
 }
 
-.visible {
-  visibility: visible !important;
+.animate-fade-in {
+  animation: fade-in .8s ease both;
+}
+
+.animate-zoom-in {
+  animation: zoom-in .6s ease both;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }

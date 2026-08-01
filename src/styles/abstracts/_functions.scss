@@ -1,15 +1,15 @@
 @use 'sass:math';
 
 /* ==========================================
-   PX TO REM
+   PX → REM
 ========================================== */
 
-@function rem($px) {
-  @return math.div($px, 16) * 1rem;
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
 }
 
 /* ==========================================
-   PX TO EM
+   PX → EM
 ========================================== */
 
 @function em($px, $context: 16) {
@@ -38,12 +38,4 @@
 
 @function line-height($font-size, $line-height) {
   @return math.div($line-height, $font-size);
-}
-
-/* ==========================================
-   Z-INDEX SAFE
-========================================== */
-
-@function z($value) {
-  @return $value;
 }
