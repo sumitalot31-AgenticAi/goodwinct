@@ -6,8 +6,8 @@ import { SiteService } from '../../../core/services/site.service';
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [
-    RouterLink
+  imports:[
+    RouterLink,
   ],
   templateUrl: './hero.html',
   styleUrl: './hero.scss',
