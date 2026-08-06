@@ -1,42 +1,44 @@
 @use '../../../../styles/abstracts' as *;
 
+/* ==========================================
+   Contact CTA
+========================================== */
 
 .contact-cta {
 
-  padding:100px 0;
+  padding: 5rem 0;
 
-  background:$primary;
-
+  background: $primary;
 
 
   .cta-wrapper {
 
-    display:flex;
+    display: flex;
 
-    align-items:center;
+    align-items: center;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    gap:50px;
+    gap: 2.5rem;
 
 
-    background:#fff;
+    background: $white;
 
-    border-radius:30px;
+    border-radius: 1.5rem;
 
-    padding:60px;
+    padding: 2.75rem;
 
 
     box-shadow:
-    0 20px 50px rgba(0,0,0,.12);
+      0 20px 50px rgba(0,0,0,.12);
 
 
 
     @include tablet {
 
-      flex-direction:column;
+      flex-direction: column;
 
-      padding:40px;
+      padding: 2.25rem;
 
     }
 
@@ -44,7 +46,7 @@
 
     @include mobile {
 
-      padding:30px;
+      padding: 1.75rem;
 
     }
 
@@ -52,48 +54,54 @@
 
 
 
+  /* ==========================================
+     Content
+  ========================================== */
 
 
   .cta-content {
 
-    flex:1;
+    flex: 1;
 
 
 
     .tag {
 
-      display:inline-block;
+      display: inline-block;
 
-      color:$primary;
+      color: $primary;
 
-      font-size:14px;
+      font-size: .85rem;
 
-      font-weight:700;
+      font-weight: 700;
 
-      text-transform:uppercase;
+      text-transform: uppercase;
 
-      letter-spacing:2px;
+      letter-spacing: .12rem;
 
-      margin-bottom:15px;
+      margin-bottom: .75rem;
 
     }
 
 
 
-
     h2 {
 
-      font-size:42px;
+      margin-bottom: 1rem;
 
-      line-height:1.2;
+      color: #1f2937;
 
-      margin-bottom:20px;
+      font-size: clamp(2rem,4vw,3rem);
+
+      line-height: 1.2;
+
+      font-weight: 800;
 
 
 
       @include mobile {
 
-        font-size:30px;
+        font-size: 2rem;
 
       }
 
@@ -101,35 +109,36 @@
 
 
 
-
     p {
 
-      color:#666;
+      color: #666;
 
-      line-height:1.8;
+      line-height: 1.7;
 
-      margin-bottom:30px;
+      margin-bottom: 1.75rem;
 
     }
-
-
 
   }
 
 
 
+  /* ==========================================
+     Buttons
+  ========================================== */
 
 
   .cta-actions {
 
-    display:flex;
+    display: flex;
 
-    gap:15px;
+    gap: 1rem;
+
 
 
     @include mobile {
 
-      flex-direction:column;
+      flex-direction: column;
 
     }
 
@@ -137,32 +146,33 @@
 
     a {
 
-      padding:14px 30px;
+      padding: .85rem 1.8rem;
 
-      border-radius:50px;
+      border-radius: 999px;
 
-      font-weight:600;
+      font-weight: 600;
 
-      transition:.3s;
+      text-align: center;
 
-      text-align:center;
+      transition: .3s ease;
 
     }
 
 
 
-
     .primary-btn {
 
-      background:$primary;
+      background: $primary;
 
-      color:#fff;
+      color: $white;
 
 
 
       &:hover {
 
-        transform:translateY(-3px);
+        transform: translateY(-3px);
+
+        box-shadow: 0 10px 25px rgba(0,0,0,.15);
 
       }
 
@@ -170,20 +180,19 @@
 
 
 
-
     .call-btn {
 
-      border:2px solid $primary;
+      border: 2px solid $primary;
 
-      color:$primary;
+      color: $primary;
 
 
 
       &:hover {
 
-        background:$primary;
+        background: $primary;
 
-        color:#fff;
+        color: $white;
 
       }
 
@@ -193,40 +202,42 @@
 
 
 
+  /* ==========================================
+     Info Card
+  ========================================== */
 
 
   .cta-info {
 
-    min-width:320px;
+    min-width: 280px;
 
-    background:#f8f8f8;
+    background: #f8f8f8;
 
-    padding:30px;
+    padding: 1.5rem;
 
-    border-radius:20px;
+    border-radius: 1rem;
 
 
 
     @include mobile {
 
-      width:100%;
+      width: 100%;
 
-      min-width:auto;
+      min-width: auto;
 
     }
 
 
 
-
     .info-item {
 
-      margin-bottom:25px;
+      margin-bottom: 1rem;
 
 
 
       &:last-child {
 
-        margin-bottom:0;
+        margin-bottom: 0;
 
       }
 
@@ -234,13 +245,13 @@
 
       span {
 
-        display:block;
+        display: block;
 
-        font-size:13px;
+        font-size: .8rem;
 
-        color:#777;
+        color: #777;
 
-        margin-bottom:6px;
+        margin-bottom: .35rem;
 
       }
 
@@ -248,13 +259,14 @@
 
       strong {
 
-        font-size:16px;
+        font-size: .95rem;
+
+        color: #1f2937;
 
       }
 
     }
 
   }
-
 
 }
