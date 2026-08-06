@@ -1,0 +1,10 @@
+---
+deployment:
+  tasks:
+    - export APPPATH=/home/zjpcxtzz/repositories/goodwinct
+    - export DEPLOYPATH=/home/zjpcxtzz/public_html
+    - cd $APPPATH
+    - npm install
+    - npm run build
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -R dist/goodwinct/browser/* $DEPLOYPATH
