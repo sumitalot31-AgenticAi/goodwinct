@@ -10,9 +10,11 @@ const browserPath = path.join(
   'browser'
 );
 
+// Serve Angular static files
 app.use(express.static(browserPath));
 
-app.get('/{*splat}', (req, res) => {
+// Angular SPA fallback
+app.get('/*splat', (req, res) => {
   res.sendFile(path.join(browserPath, 'index.html'));
 });
 
