@@ -12,7 +12,7 @@ const browserPath = path.join(
 
 app.use(express.static(browserPath));
 
-app.get('*', (req, res) => {
+app.get('/{*splat}', (req, res) => {
   res.sendFile(path.join(browserPath, 'index.html'));
 });
 
